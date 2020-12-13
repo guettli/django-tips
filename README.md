@@ -2,6 +2,8 @@
 
 # If you are new to Software Development
 
+If you are new to software development, then there is a long road before you. But Django is a good choice, since it is a well established and very good documented framework.
+
 First learn Python, then some HTML and CSS. Then Django and SQL.
 
 Avoid ReactJS or Vue, since you might not need them. First start with the traditional approach: Create HTML on
