@@ -6,6 +6,8 @@ If you are new to software development, then there is a long road before you. Bu
 
 First learn Python, then some HTML and CSS. Then Django and SQL.
 
+After you learned the basiccs (Python, some HTML, some CSS), then use the [Django tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/).
+
 Avoid ReactJS or Vue, since you might not need them. First start with the traditional approach: Create HTML on
 the server and send it to the web browser.
 
