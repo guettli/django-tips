@@ -26,6 +26,10 @@ Just use a [OneToOneField](https://docs.djangoproject.com/en/dev/ref/models/fiel
 
 There is a nice article about how to integrate this into the admin: [Vitor Freitas "How to Add User Profile To Django Admin"](https://simpleisbetterthancomplex.com/tutorial/2016/11/23/how-to-add-user-profile-to-django-admin.html)
 
+# Testing:
+
+[pytest-django](https://github.com/pytest-dev/pytest-django)
+
 # Django Packages Overview
 
 [djangopackages.org](https://djangopackages.org/)
