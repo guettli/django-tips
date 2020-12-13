@@ -24,4 +24,21 @@ Just use a [OneToOneField](https://docs.djangoproject.com/en/dev/ref/models/fiel
 
 There is a nice article about how to integrate this into the admin: [Vitor Freitas "How to Add User Profile To Django Admin"](https://simpleisbetterthancomplex.com/tutorial/2016/11/23/how-to-add-user-profile-to-django-admin.html)
 
+# Django Packages Overview
+
+[djangopackages.org](https://djangopackages.org/)
+
+# Login via Google, Amazon, ...?
+
+Use [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
+
+# Vague Question?
+
+Ask in the [Django Forum](https://forum.djangoproject.com/)
+
+or in a Django Facebook Group.
+
+# Particular Question?
+
+Ask on [Stackoverflow](https://stackoverflow.com/questions/tagged/django)
 
