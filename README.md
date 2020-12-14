@@ -1,4 +1,4 @@
-# My opinionated Django Tips
+# Güttli's opinionated Django Tips
 
 # If you are new to Software Development
 
