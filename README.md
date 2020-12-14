@@ -50,5 +50,7 @@ Ask on [Stackoverflow](https://stackoverflow.com/questions/tagged/django)
 
 # Related
 
-[Güttli's opinionated Python Tips](https://github.com/guettli/python-tips)
+* [Güttli's opinionated Python Tips](https://github.com/guettli/python-tips)
+* [Güttli working-out-loud](https://github.com/guettli/wol)
+
 
