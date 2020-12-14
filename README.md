@@ -30,6 +30,19 @@ There is a nice article about how to integrate this into the admin: [Vitor Freit
 
 [pytest-django](https://github.com/pytest-dev/pytest-django)
 
+pytest.ini:
+```
+[pytest]
+DJANGO_SETTINGS_MODULE = mysite.settings
+FAIL_INVALID_TEMPLATE_VARS = True
+```
+
+`FAIL_INVALID_TEMPLATE_VARS` causes the rendering of a template to fail, if a template variable does not exist. I like this. See Zen-of-Python "Errors should never pass silently."
+
+See [pytest-django docs "fail for invalid variables in templates](https://pytest-django.readthedocs.io/en/latest/usage.html#fail-on-template-vars-fail-for-invalid-variables-in-templates)
+
+
+
 # Django Packages Overview
 
 [djangopackages.org](https://djangopackages.org/)
