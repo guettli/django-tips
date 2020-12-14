@@ -48,3 +48,7 @@ or in a Django Facebook Group.
 
 Ask on [Stackoverflow](https://stackoverflow.com/questions/tagged/django)
 
+# Related
+
+[Güttli's opinionated Python Tips](https://github.com/guettli/python-tips)
+
