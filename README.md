@@ -61,6 +61,13 @@ or in a Django Facebook Group.
 
 Ask on [Stackoverflow](https://stackoverflow.com/questions/tagged/django)
 
+# Survey
+
+[Community Survey 2020](https://www.djangoproject.com/weblog/2020/jul/28/community-survey-2020/)
+
+Unfortunately not that cool like [state of js](https://stateofjs.com/) or [state of css](https://stateofcss.com/),
+but the Django Survey gives you a nice overview, too.
+
 # Related
 
 * [Güttli's opinionated Python Tips](https://github.com/guettli/python-tips)
