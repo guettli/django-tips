@@ -41,7 +41,7 @@ FAIL_INVALID_TEMPLATE_VARS = True
 
 See [pytest-django docs "fail for invalid variables in templates](https://pytest-django.readthedocs.io/en/latest/usage.html#fail-on-template-vars-fail-for-invalid-variables-in-templates)
 
-
+Or you use [django-shouty-templates](https://pypi.org/project/django-shouty-templates/) which monkey-patches some django methods to shout as soon as there is something strange.
 
 # Django Packages Overview
 
