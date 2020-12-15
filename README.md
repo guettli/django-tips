@@ -68,6 +68,11 @@ Ask on [Stackoverflow](https://stackoverflow.com/questions/tagged/django)
 Unfortunately not that cool like [state of js](https://stateofjs.com/) or [state of css](https://stateofcss.com/),
 but the Django Survey gives you a nice overview, too.
 
+# Software built with Django
+
+* [OpenSlides](https://openslides.com/) OpenSlides is the all-in-one solution for running your plenary meetings and conferences. 
+* [Taiga](https://github.com/taigaio/taiga-back) Agile project management platform. Built on top of Django and AngularJS
+
 # Related
 
 * [Güttli's opinionated Python Tips](https://github.com/guettli/python-tips)
