@@ -47,6 +47,25 @@ Or you use [django-shouty-templates](https://pypi.org/project/django-shouty-temp
 
 [djangopackages.org](https://djangopackages.org/)
 
+# Angular, React, Vue .... or ....
+
+If you follow the current hype, you get the impression that web applications must be build like this: 
+
+There is a backend (for example Django) which provides an http-API. This API gets used by a
+JavaScript application written in Angular, React, or Vue.
+
+Wait, slow down.
+
+I think there is a simpler and more efficient way to develop an web application: Just create
+HTML on the server side with Django.
+
+To make your HTML look good on mobile and desktop use [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
+
+To make your application load/submit HTML snippets (to avoid the full scree refresh) you can use [htmx](https://htmx.org).
+
+This way you have a simple stack which gives you a solid fundation for your application.
+
+
 # Login via Google, Amazon, ...?
 
 Use [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
