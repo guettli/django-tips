@@ -103,6 +103,7 @@ but the Django Survey gives you a nice overview, too.
 
 * [OpenSlides](https://openslides.com/) OpenSlides is the all-in-one solution for running your plenary meetings and conferences. 
 * [Taiga](https://github.com/taigaio/taiga-back) Agile project management platform. Built on top of Django and AngularJS
+* [Saleor](https://saleor.io/) e-commerce plattform
 
 # Related
 
