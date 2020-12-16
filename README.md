@@ -74,7 +74,7 @@ Use [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
 
 Ask in the [Django Forum](https://forum.djangoproject.com/)
 
-or in a Django Facebook Group.
+or in a Django Facebook Group. For example [Django Python Web Framework](https://www.facebook.com/groups/python.django)
 
 # Particular Question?
 
