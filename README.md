@@ -79,14 +79,18 @@ But you need to dinstinguish between vague and specific questions.
 
 ## Vague Question?
 
-Ask in the [Django Forum](https://forum.djangoproject.com/)
+Ask in the [Django Forum](https://forum.djangoproject.com/) or in a Django Facebook Group. For example [Django Python Web Framework](https://www.facebook.com/groups/python.django)
 
-or in a Django Facebook Group. For example [Django Python Web Framework](https://www.facebook.com/groups/python.django)
+For example: "Which IDE should I use for ...". 
 
 ## Specific Question?
 
 Ask on [Stackoverflow](https://stackoverflow.com/questions/tagged/django)
 
+The best questions provide some example code which can be executed easily. This increases the likelihood that
+someone will provide an answer soon.
+
+If your code creates a stacktrace, then please add the whole stacktrace to the question.
 
 # Survey
 
