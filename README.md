@@ -70,15 +70,23 @@ This way you have a simple stack which gives you a solid fundation for your appl
 
 Use [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
 
-# Vague Question?
+# Ask Questions
+
+Asking questions is important. It pushes you and others forward.
+
+But you need to dinstinguish between vague and specific questions.
+
+
+## Vague Question?
 
 Ask in the [Django Forum](https://forum.djangoproject.com/)
 
 or in a Django Facebook Group. For example [Django Python Web Framework](https://www.facebook.com/groups/python.django)
 
-# Particular Question?
+## Specific Question?
 
 Ask on [Stackoverflow](https://stackoverflow.com/questions/tagged/django)
+
 
 # Survey
 
