@@ -78,6 +78,10 @@ Or use a JS based solution. For example [d3](https://github.com/d3/d3)
 
 Use [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
 
+# Static files
+
+Use the library WhiteNoise, [even during development](http://whitenoise.evans.io/en/latest/django.html#using-whitenoise-in-development)
+
 # Ask Questions
 
 Asking questions is important. It pushes you and others forward.
