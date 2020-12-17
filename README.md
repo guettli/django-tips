@@ -72,6 +72,8 @@ The Python ecosystem is much bigger than the Django ecosystem.
 For example you want to visualize data.
 Don't search for a django solution, search for a Python solution. For example: [Holoviews](https://github.com/holoviz/holoviews)
 
+Or use a JS based solution. For example [d3](https://github.com/d3/d3)
+
 # Login via Google, Amazon, ...?
 
 Use [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
