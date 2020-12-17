@@ -65,6 +65,12 @@ To make your application load/submit HTML snippets (to avoid the full scree refr
 
 This way you have a simple stack which gives you a solid fundation for your application.
 
+# Learn to distinguish between Django and Python
+
+The Python ecosystem is much bigger than the Django ecosystem. 
+
+For example you want to visualize data.
+Don't search for a django solution, search for a Python solution. For example: [Holoviews](https://github.com/holoviz/holoviews)
 
 # Login via Google, Amazon, ...?
 
