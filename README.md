@@ -111,11 +111,12 @@ If your code creates a stacktrace, then please add the whole stacktrace to the q
 Unfortunately not that cool like [state of js](https://stateofjs.com/) or [state of css](https://stateofcss.com/),
 but the Django Survey gives you a nice overview, too.
 
-# Deploy: Via Dokku on VPS
+# Deploy: PaaS
 
-A VPS (Virtual Private Server) is cheap. You can create your own PaaS solution with [Dokku](https://github.com/dokku/dokku). 
+* You can rent a VPS (Virtual Private Server). It is cheap. You can fiddle with ssh, vi and commandline tools to serve your application. Or you can use configuration management tools liks Ansible or Terraform.
+* You can rent a PaaS (Heroku, Azure, AWS, ...)
+* You can use an open source PaaS on your own VPS. See [Open Source PaaS List](https://github.com/guettli/open-source-paas)
 
-Of course Heroku/Azure/AWS have fancy GUIs and fancy plugins, but Dokku gives you the basics for free.
 
 
 # Software built with Django
