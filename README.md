@@ -30,6 +30,8 @@ There is a nice article about how to integrate this into the admin: [Vitor Freit
 
 Use the library [pytest-django](https://github.com/pytest-dev/pytest-django). Their docs are good.
 
+If you want to get an exception (as opposed to an empty string) if a template variable is unknown, then you can use this config:
+
 pytest.ini:
 ```
 [pytest]
