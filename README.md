@@ -131,6 +131,11 @@ It is simple to set up, is free and shows all uncaught exceptions in an easy to 
 
 If someone knows an open source alternative, please let me know!
 
+# Django settings.EMAIL_HOST
+
+If you get `(421, '4.7.0 Try again later, closing connection.')` while sending mails via `settings.EMAIL_HOST = 'smtp.gmail.com'`, then
+have a look at [this StackOverflow answer](https://stackoverflow.com/questions/65377421/django-force-ipv4-for-email-host-gmail-421-4-7-0-try-again-later-closing). It works if you use IPv4.
+
 # Software built with Django
 
 * [OpenSlides](https://openslides.com/) OpenSlides is the all-in-one solution for running your plenary meetings and conferences. 
