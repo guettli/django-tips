@@ -28,6 +28,8 @@ There is a nice article about how to integrate this into the admin: [Vitor Freit
 
 # Testing:
 
+## pytest-django for Unittests
+
 Use the library [pytest-django](https://github.com/pytest-dev/pytest-django). Their docs are good.
 
 If you want to get an exception (as opposed to an empty string) if a template variable is unknown, then you can use this config:
@@ -44,6 +46,13 @@ FAIL_INVALID_TEMPLATE_VARS = True
 See [pytest-django docs "fail for invalid variables in templates](https://pytest-django.readthedocs.io/en/latest/usage.html#fail-on-template-vars-fail-for-invalid-variables-in-templates)
 
 Or you use [django-shouty-templates](https://pypi.org/project/django-shouty-templates/) which monkey-patches some django methods to shout as soon as there is something strange.
+
+## Avoid Selenium Tests
+
+Selenium automates browsers. It can automated modern browsers and IE. It is flaky. It will randomly fail, and you will waste a lot of time.
+Avoid to support IE, and prefer to focus on development 
+
+[Google Trend "Selenium"](https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0c828v) is going down.
 
 # Django Packages Overview
 
