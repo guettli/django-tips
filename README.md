@@ -117,7 +117,19 @@ but the Django Survey gives you a nice overview, too.
 * You can rent a PaaS (Heroku, Azure, AWS, ...)
 * You can use an open source PaaS on your own VPS. See [Open Source PaaS List](https://github.com/guettli/open-source-paas)
 
+# Uncaught Exception Handling: Sentry
 
+During development on your local machine you get a nice debug-view if there is an uncaught exception.
+
+On the production system you can a white page "Server Error (500)".
+
+And of course, you want to know if users of your site get server error.
+
+Personally I prefer simple open source solutions to free and great commercial solutions. But in this case I settled with [Sentry](//sentry.io/).
+
+It is simple to set up, is free and shows all uncaught exceptions in an easy to use web GUI.
+
+If someone knows an open source alternative, please let me know!
 
 # Software built with Django
 
