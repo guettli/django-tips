@@ -28,7 +28,7 @@ There is a nice article about how to integrate this into the admin: [Vitor Freit
 
 # Testing:
 
-[pytest-django](https://github.com/pytest-dev/pytest-django)
+Use the library [pytest-django](https://github.com/pytest-dev/pytest-django). Their docs are good.
 
 pytest.ini:
 ```
