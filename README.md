@@ -54,7 +54,9 @@ Avoid to support IE, and prefer to focus on development
 
 [Google Trend "Selenium"](https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0c828v) is going down.
 
-## Django fixtures
+## Fixtures
+
+Software test fixtures initialize test functions. They provide a fixed baseline so that tests execute reliably and produce consistent, repeatable, results. 
 
 I don't need [Django Fixtures](https://docs.djangoproject.com/en/3.1/howto/initial-data/). If I need data in a production systems, I can use a script or database migration.
 
