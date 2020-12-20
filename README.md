@@ -54,6 +54,14 @@ Avoid to support IE, and prefer to focus on development
 
 [Google Trend "Selenium"](https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0c828v) is going down.
 
+## Django fixtures
+
+I don't need [Django Fixtures](https://docs.djangoproject.com/en/3.1/howto/initial-data/). If I need data in a production systems, I can use a script or database migration.
+
+If I need data for a test, then I use [pytest fixtures](https://docs.pytest.org/en/stable/fixture.html)
+
+And I don't see a reason to use a library like [factory-boy](https://factoryboy.readthedocs.io/en/stable/). Pytest and Django-ORM gives me all I need.
+
 # Django Packages Overview
 
 [djangopackages.org](https://djangopackages.org/)
