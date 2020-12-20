@@ -49,7 +49,7 @@ Or you use [django-shouty-templates](https://pypi.org/project/django-shouty-temp
 
 [djangopackages.org](https://djangopackages.org/)
 
-# Angular, React, Vue .... or ....
+# htmx
 
 If you follow the current hype, you get the impression that web applications must be build like this: 
 
@@ -61,11 +61,13 @@ Wait, slow down.
 I think there is a simpler and more efficient way to develop an web application: Just create
 HTML on the server side with Django.
 
-To make your HTML look good on mobile and desktop use [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
+To make your application load/submit HTML snippets (to avoid the full screen refresh) you can use [htmx](https://htmx.org).
 
-To make your application load/submit HTML snippets (to avoid the full scree refresh) you can use [htmx](https://htmx.org).
+This way you have a simple stack which gives you a solid foundation for your application.
 
-This way you have a simple stack which gives you a solid fundation for your application.
+# Responsive Web Design with Bootstrap
+
+To make your HTML look good on mobile and desktop I use [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
 
 # Learn to distinguish between Django and Python
 
