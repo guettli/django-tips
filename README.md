@@ -154,6 +154,12 @@ It is simple to set up, is free and shows all uncaught exceptions in an easy to 
 
 If someone knows an open source alternative, please let me know!
 
+# Uptime Monitoring
+
+Sentry won't help you, if there is something broken and your http server does not start. To be sure that your site is running you can use the free service from example https://uptimerobot.com/
+
+They check your site every N minutes from outside via http.
+
 # Django settings.EMAIL_HOST
 
 If you get `(421, '4.7.0 Try again later, closing connection.')` while sending mails via `settings.EMAIL_HOST = 'smtp.gmail.com'`, then
