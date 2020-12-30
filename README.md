@@ -97,6 +97,31 @@ Don't search for a django solution, search for a Python solution. For example: [
 
 Or use a JS based solution. For example [d3](https://github.com/d3/d3)
 
+# Development Environment
+
+In the past I had the whole stack installed in my local development environment (Apache or Nginx/Gunicorn), but
+I don't do this any more. The `runserver` of Django is enough for development.
+
+I develop on Ubuntu Linux.
+
+But I use PostgreSQL even for development. If you use the same username for your PostgreSQL-user like for your
+Linux-user, then you don't need to configure a password for the database.
+
+# Production Environment
+
+I use a cheap VPS from Hetzner. Every system I run on the VPS has its own Linux user. Every Linux-User has a virtualenv in $HOME,
+which gets activated in .bashrc. This is handy if you want to check something with SSH.
+
+I run `gunicorn` webserver via an Systems like explained in the [Gunicorn Deploying Docs](https://docs.gunicorn.org/en/stable/deploy.html#systemd)
+
+This way I can run several systems on one VPS. This means there are N gunicorn processes.
+
+As reverse proxy and https endpoint I use Nginx.
+
+# Backup
+
+First I run pg_dump, then [timegaps](https://pypi.org/project/timegaps/) to remove outdated dumps, then rsync to a second VPS.
+
 # Login via Google, Amazon, ...?
 
 Use [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
