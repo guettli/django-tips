@@ -57,6 +57,51 @@ foo/overview.html
 </table>
 ```
 
+## Global Constants (Brand)
+
+Imagine you have a setting called `brand` which is the name of your site. And since you develop re-usable software ([White-label product
+](https://en.wikipedia.org/wiki/White-label_product)) the brand is customizable.
+
+Usualy I would store this value in the database, but for customizing the django admin, it easier if the value is available before
+the databaes connection is made.
+
+settings.py
+```
+BRAND = 'foo'
+
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'OPTIONS': {
+            'context_processors': [
+               ...
+                'foo.context_processor.constants',  # make some global constants available in all templates
+```
+
+
+
+mysite/urls.py
+```
+
+admin.site.site_header = '{} Admin'.format(settings.BRAND)
+admin.site.index_title = '{} Admin'.format(settings.BRAND)
+admin.site.site_title = '{} Admin'.format(settings.BRAND)
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    ...
+```
+
+foo/context_processor.py
+```
+from django.conf import settings
+
+def constants(request):
+    return dict(brand=settings.BRAND)
+```
+
+
 
 # Testing
 
