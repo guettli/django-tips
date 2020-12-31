@@ -28,7 +28,35 @@ There is a nice article about how to integrate this into the admin: [Vitor Freit
 
 # Templates
 
+## Use CSS, not "cycle"
 Don't use (or try to understand) the [cycle](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#cycle) templatetag. Today you don't need to alter the css class to create cebra-tables. Vanialla CSS is enough.
+
+## Keep opening and closing tag together
+
+foo/start-overview.html
+```
+<table>
+ <tr><th>Col1</th>...</tr>
+ ...
+```
+
+foo/end-overview.html
+```
+</table>
+```
+
+===> NO!
+
+Keep the opening and closing tag together!
+
+foo/overview.html
+```
+<table>
+ {% include 'foo/overview-heading.html' %}
+ ...
+</table>
+```
+
 
 # Testing
 
