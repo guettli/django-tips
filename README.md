@@ -26,7 +26,11 @@ Just use a [OneToOneField](https://docs.djangoproject.com/en/dev/ref/models/fiel
 
 There is a nice article about how to integrate this into the admin: [Vitor Freitas "How to Add User Profile To Django Admin"](https://simpleisbetterthancomplex.com/tutorial/2016/11/23/how-to-add-user-profile-to-django-admin.html)
 
-# Testing:
+# Templates
+
+Don't use (or try to understand) the [cycle](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#cycle) templatetag. Today you don't need to alter the css class to create cebra-tables. Vanialla CSS is enough.
+
+# Testing
 
 ## pytest-django for Unittests
 
