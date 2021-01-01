@@ -31,8 +31,15 @@ There is a nice article about how to integrate this into the admin: [Vitor Freit
 It is important to understand the difference between a project and an application in the context of Django.
 Please read [Projects and Applications](https://docs.djangoproject.com/en/3.1/ref/applications/#projects-and-applications)
 
-I always try to keep the project small. I always call the project `mysite`. The project is a small container. It contains the app.
+I always try to keep the project small. The project is a small container. It contains the app.
 The project contains settings, but almost no code.
+
+# Project `mysite`
+
+I always call the project `mysite`, like in the Django tutorial.
+ 
+This has the benefit that settings.py, pytest.ini, wsgi.py and many other
+files are almost identical between my different projects.
 
 # Templates
 
