@@ -26,6 +26,14 @@ Just use a [OneToOneField](https://docs.djangoproject.com/en/dev/ref/models/fiel
 
 There is a nice article about how to integrate this into the admin: [Vitor Freitas "How to Add User Profile To Django Admin"](https://simpleisbetterthancomplex.com/tutorial/2016/11/23/how-to-add-user-profile-to-django-admin.html)
 
+# Project vs App
+
+It is important to understand the difference between a project and an application in the context of Django.
+Please read [Projects and Applications](https://docs.djangoproject.com/en/3.1/ref/applications/#projects-and-applications)
+
+I always try to keep the project small. I always call the project `mysite`. The project is a small container. It contains the app.
+The project contains settings, but almost no code.
+
 # Templates
 
 ## Use CSS, not "cycle"
