@@ -142,7 +142,7 @@ Or you use [django-shouty-templates](https://pypi.org/project/django-shouty-temp
 ## Avoid Selenium Tests
 
 Selenium automates browsers. It can automated modern browsers and IE. It is flaky. It will randomly fail, and you will waste a lot of time.
-Avoid to support IE, and prefer to focus on development 
+Avoid to support IE, and prefer to focus on development.
 
 [Google Trend "Selenium"](https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0c828v) is going down.
 
