@@ -192,7 +192,11 @@ Or use a JS based solution. For example [d3](https://github.com/d3/d3)
 # Development Environment
 
 In the past I had the whole stack installed in my local development environment (Apache or Nginx/Gunicorn), but
-I don't do this any more. The `runserver` of Django is enough for development.
+I don't do this any more. The `runserver` of Django is enough for development. You usualy don't need https during development, http is enough.
+
+This contradicts the guideline that the development environment and the production environment should be equal.
+Several years I used the same setup on dev and prod. But now I think runserver is enough. The runserver reloads code fast,
+which is great for a fluent "edit test" cycle.
 
 I develop on Ubuntu Linux.
 
