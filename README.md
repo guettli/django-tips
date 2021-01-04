@@ -281,6 +281,10 @@ Sentry won't help you, if there is something broken and your http server does no
 
 They check your site every N minutes from outside via http.
 
+# Page Speed
+
+You can use [Lighthouse](https://developers.google.com/web/tools/lighthouse) (via Chrome) or [PageSpeed Insights (Google)](https://developers.google.com/speed/pagespeed/insights/) to check your page.
+
 # Django settings.EMAIL_HOST
 
 If you get `(421, '4.7.0 Try again later, closing connection.')` while sending mails via `settings.EMAIL_HOST = 'smtp.gmail.com'`, then
