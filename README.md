@@ -116,6 +116,10 @@ def constants(request):
     return dict(brand=settings.BRAND)
 ```
 
+# Django Debug Toolbar
+
+The [Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/) is really useful. I even enable it
+in production.
 
 
 # Testing
