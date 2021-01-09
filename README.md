@@ -2,9 +2,9 @@
 
 # If you are new to Software Development
 
-If you are new to software development, then there is a long road before you. But Django is a good choice, since it is a well established and very good documented framework.
+If you are new to software development, then there is a long road before you. Django is a good choice, since it is a well established and a very good documented framework.
 
-First learn Python, then some HTML and CSS. Then Django and SQL.
+First learn Python, then some HTML and CSS, then Django and SQL.
 
 After you learned the basics (Python, some HTML, some CSS), then use the [Django tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/).
 
@@ -13,7 +13,7 @@ the server and send it to the web browser.
 
 If you want to use a CSS/JS library, then use [Bootstrap5](https://getbootstrap.com/).
 
-Avoid JQuery. It is dead. Unfortunately a lot of code snippets and examples depend on it, but
+Avoid JQuery, it is dead. Unfortunately a lot of code snippets and examples depends on it, but
 this will change during the next years.
 
 You can start with SQLite, but sooner or later you should switch to PostgreSQL.
@@ -37,7 +37,7 @@ The project contains settings, but almost no code.
 # Project `mysite`
 
 I always call the project `mysite`, like in the Django tutorial.
- 
+
 This has the benefit that settings.py, pytest.ini, wsgi.py and many other
 files are almost identical between my different projects.
 
@@ -118,7 +118,7 @@ def constants(request):
 
 # Django Debug Toolbar
 
-The [Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/) is really useful. I even enable it
+The [Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/) is really useful. I usually enable it
 in production.
 
 
@@ -145,14 +145,14 @@ Or you use [django-shouty-templates](https://pypi.org/project/django-shouty-temp
 
 ## Avoid Selenium Tests
 
-Selenium automates browsers. It can automated modern browsers and IE. It is flaky. It will randomly fail, and you will waste a lot of time.
-Avoid to support IE, and prefer to focus on development.
+Selenium automates browsers. It can automate modern browsers and IE. It is flaky. It will randomly fail, and you will waste a lot of time.
+Avoid to supportting IE, and focus more on development.
 
 [Google Trend "Selenium"](https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0c828v) is going down.
 
 ## Fixtures
 
-Software test fixtures initialize test functions. They provide a fixed baseline so that tests execute reliably and produce consistent, repeatable, results. 
+Software test fixtures initialize test functions. They provide a fixed baseline so that tests execute reliably and produce consistent, repeatable, results.
 
 I don't need [Django Fixtures](https://docs.djangoproject.com/en/3.1/howto/initial-data/). If I need data in a production systems, I can use a script or database migration.
 
@@ -166,7 +166,7 @@ And I don't see a reason to use a library like [factory-boy](https://factoryboy.
 
 # htmx
 
-If you follow the current hype, you get the impression that web applications must be build like this: 
+If you follow the current hype, you get the impression that web applications must be build like this:
 
 There is a backend (for example Django) which provides an http-API. This API gets used by a
 JavaScript application written in Angular, React, or Vue.
@@ -186,7 +186,7 @@ To make your HTML look good on mobile and desktop I use [Bootstrap5](https://get
 
 # Learn to distinguish between Django and Python
 
-The Python ecosystem is much bigger than the Django ecosystem. 
+The Python ecosystem is much bigger than the Django ecosystem.
 
 For example you want to visualize data.
 Don't search for a django solution, search for a Python solution. For example: [Holoviews](https://github.com/holoviz/holoviews)
@@ -241,7 +241,7 @@ But you need to dinstinguish between vague and specific questions.
 
 Ask in the [Django Forum](https://forum.djangoproject.com/) or in a Django Facebook Group. For example [Django Python Web Framework](https://www.facebook.com/groups/python.django)
 
-For example: "Which IDE should I use for ...". 
+For example: "Which IDE should I use for ...".
 
 ## Specific Question?
 
@@ -269,15 +269,15 @@ but the Django Survey gives you a nice overview, too.
 
 During development on your local machine you get a nice debug-view if there is an uncaught exception.
 
-On the production system you can a white page "Server Error (500)".
+On the production system you can use a white page "Server Error (500)".
 
 And of course, you want to know if users of your site get server error.
 
-Personally I prefer simple open source solutions to free and great commercial solutions. But in this case I settled with [Sentry](//sentry.io/).
+Personally, I prefer simple open source solutions to great commercial solutions. But in this case I settled with [Sentry](https://sentry.io/).
 
-It is simple to set up, is free and shows all uncaught exceptions in an easy to use web GUI.
+It is free and simple to set up, it shows all uncaught exceptions in an easy to use web GUI.
 
-If someone knows an open source alternative, please let me know!
+If someone knows any open source alternative, please let me know!
 
 # Uptime Monitoring
 
@@ -296,7 +296,7 @@ have a look at [this StackOverflow answer](https://stackoverflow.com/questions/6
 
 # Software built with Django
 
-* [OpenSlides](https://openslides.com/) OpenSlides is the all-in-one solution for running your plenary meetings and conferences. 
+* [OpenSlides](https://openslides.com/) OpenSlides is the all-in-one solution for running your plenary meetings and conferences.
 * [Taiga](https://github.com/taigaio/taiga-back) Agile project management platform. Built on top of Django and AngularJS
 * [Saleor](https://saleor.io/) e-commerce plattform
 
