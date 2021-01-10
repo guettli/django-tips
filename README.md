@@ -187,7 +187,7 @@ You want to create one HTML page which should three forms. The Django forms libr
 You could use [Prefixes for forms](https://docs.djangoproject.com/en/3.1/ref/forms/api/#prefixes-for-forms) and put your three django-forms
 into one big html <form>. Depending on the context, this often feels too heavy. 
 
-That's where [#htmx] can help you: With htmx you can load/submit html fragments easily.
+That's where [htmx](#htmx) can help you: With htmx you can load/submit html fragments easily.
 
 
 # Responsive Web Design with Bootstrap
