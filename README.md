@@ -180,6 +180,16 @@ To make your application load/submit HTML snippets (to avoid the full screen ref
 
 This way you have a simple stack which gives you a solid foundation for your application.
 
+# One Page, there forms
+
+You want to create one HTML page which should three forms. The Django forms library is great, but it does not solve this problem for you.
+
+You could use [Prefixes for forms](https://docs.djangoproject.com/en/3.1/ref/forms/api/#prefixes-for-forms) and put your three django-forms
+into one big html <form>. Depending on the context, this often feels too heavy. 
+
+That's where [#htmx] can help you: With htmx you can load/submit html fragments easily.
+
+
 # Responsive Web Design with Bootstrap
 
 To make your HTML look good on mobile and desktop I use [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
