@@ -276,6 +276,33 @@ but the Django Survey gives you a nice overview, too.
 * You can rent a PaaS (Heroku, Azure, AWS, ...)
 * You can use an open source PaaS on your own VPS. See [Open Source PaaS List](https://github.com/guettli/open-source-paas)
 
+# FBV vs CBV
+
+"Function based Views" vs "Class based Views".
+
+I like both.
+
+CBV have some draw-back. If something does not work the way you want, then it is harder to debug the root-cause.
+
+Example:
+
+```
+class MyView(FormView):
+    form = MyForm
+```
+
+This will give you:
+
+```
+TypeError 'NoneType' object is not callable
+
+.../django/views/generic/edit.py, line 33, in get_form
+ return form_class(**self.get_form_kwargs()) 
+ ```
+ 
+ It will need some time to detect the root-cause. In this example the reason is a typo. You need to use `form_class = MyForm`.
+
+
 # Uncaught Exception Handling: Sentry
 
 During development on your local machine you get a nice debug-view if there is an uncaught exception.
