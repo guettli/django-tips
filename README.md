@@ -185,7 +185,7 @@ This way you have a simple stack which gives you a solid foundation for your app
 You want to create one HTML page which should three forms. The Django forms library is great, but it does not solve this problem for you.
 
 You could use [Prefixes for forms](https://docs.djangoproject.com/en/3.1/ref/forms/api/#prefixes-for-forms) and put your three django-forms
-into one big html <form>. Depending on the context, this often feels too heavy. 
+into one big html `<form>`. Depending on the context, this often feels too heavy. 
 
 That's where [htmx](#htmx) can help you: With htmx you can load/submit html fragments easily.
 
