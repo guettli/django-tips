@@ -319,7 +319,8 @@ If someone knows an open source alternative, please let me know!
 
 # Uptime Monitoring
 
-Sentry won't help you, if there is something broken and your http server does not start. To be sure that your site is running you can use the free service from example https://uptimerobot.com/
+Sentry won't help you, if there is something broken and your http server does not start. To be sure that your site is running you can use a free service.
+There are several, I use https://uptimerobot.com/
 
 They check your site every N minutes from outside via http.
 
