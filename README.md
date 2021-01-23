@@ -11,12 +11,14 @@ After you learned the basics (Python, some HTML, some CSS), then use the [Django
 Avoid ReactJS or Vue, since you might not need them. First start with the traditional approach: Create HTML on
 the server and send it to the web browser.
 
-If you want to use a CSS/JS library, then use [Bootstrap5](https://getbootstrap.com/).
+If you want to use a CSS library, then use [Bootstrap5](https://getbootstrap.com/).
 
 Avoid JQuery. It is dead. Unfortunately a lot of code snippets and examples depend on it, but
 this will change during the next years.
 
 You can start with SQLite, but sooner or later you should switch to PostgreSQL.
+
+My hint: Don't dive too deep into JavaScript. It is less important than most people think.
 
 # How to extend the user model in Django?
 
@@ -203,6 +205,20 @@ For example you want to visualize data.
 Don't search for a django solution, search for a Python solution. For example: [Holoviews](https://github.com/holoviz/holoviews)
 
 Or use a JS based solution. For example [d3](https://github.com/d3/d3)
+
+# Avoid request.user
+
+Imagine you write a page so that the user is able to edit his/her address. You used request.user and everything works fine. 
+
+
+Now you want to make the same form available
+to a superuser, so that the superuser can edit the address of a user.
+
+Now things get mixed up. Because `request.user` is not longer the user of the address ....
+
+You can avoid the confusion if you avoid `request.user` and instead require that the caller explicitly gives you
+an user object.
+
 
 # Development Environment
 
