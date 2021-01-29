@@ -355,6 +355,14 @@ have a look at [this StackOverflow answer](https://stackoverflow.com/questions/6
 * [Taiga](https://github.com/taigaio/taiga-back) Agile project management platform. Built on top of Django and AngularJS
 * [Saleor](https://saleor.io/) e-commerce plattform
 
+# Things which could get improved
+
+"There are only two hard things in Computer Science: cache invalidation and naming things."
+
+In ModelForm it is called "instance". In a class-based-view it is called "object". In Admin templates it is called "original". It would be nice to have **one** term for the thing.
+
+
+
 # Related
 
 * [Güttli's opinionated Python Tips](https://github.com/guettli/python-tips)
