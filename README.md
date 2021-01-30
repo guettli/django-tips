@@ -361,6 +361,11 @@ have a look at [this StackOverflow answer](https://stackoverflow.com/questions/6
 
 In ModelForm it is called "instance". In a class-based-view it is called "object". In Admin templates it is called "original". It would be nice to have **one** term for the thing.
 
+# Dependecies to non-Python packages
+
+Example: include a JS library like Bootstrap:
+
+https://github.com/xstatic-py/xstatic
 
 
 # Related
