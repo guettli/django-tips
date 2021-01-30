@@ -370,6 +370,7 @@ https://github.com/xstatic-py/xstatic
 
 # Related
 
+* [Güttli django-htmx-fun](https://github.com/guettli/django-htmx-fun) Small intro to htmx.
 * [Güttli's opinionated Python Tips](https://github.com/guettli/python-tips)
 * [Güttli working-out-loud](https://github.com/guettli/wol)
 
