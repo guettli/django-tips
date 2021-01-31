@@ -245,6 +245,11 @@ This way I can run several systems on one VPS. This means there are N gunicorn p
 
 As reverse proxy and https endpoint I use Nginx.
 
+# Django's Jobs vs Webserver's Jobs
+
+You should understand that's the job of the webserver to provide `https` (Certificates ...) or to compress the responses.
+It makes no sense to use the Django [GZipMiddleware](https://docs.djangoproject.com/en/dev/ref/middleware/#module-django.middleware.gzip).
+
 # Backup
 
 First I run pg_dump, then [timegaps](https://pypi.org/project/timegaps/) to remove outdated dumps, then rsync to a second VPS.
