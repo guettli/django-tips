@@ -59,7 +59,7 @@ django.setup()
 from django.urls import resolve
 print(resolve('/foo/bar/'))
 
---> ResolverMatch(func=foocms.views.bar_handler, args=('/foo/bar/',), kwargs={}, url_name=foocms, app_names=[], namespaces=[], route=^(.*)/$)
+--> ResolverMatch(func=foocms.views.bar_handler, args=('/foo/bar/',), kwargs={}, url_name=foocms, ...)
 
 ```
 
