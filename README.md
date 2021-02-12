@@ -46,7 +46,19 @@ files are almost identical between my different projects.
 # Templates
 
 ## Use CSS, not "cycle"
-Don't use (or try to understand) the [cycle](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#cycle) templatetag. Today you don't need to alter the css class to create cebra-tables. Vanialla CSS is enough.
+Don't use (or try to understand) the [Django cycle](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#cycle) templatetag. Today you don't need to alter the css class to create cebra-tables. Vanialla CSS is enough.
+
+## How to debug Django's url resolving?
+If you are new to a big project, you might not easily see which view function does handle an URL.
+
+You can use [resolve()](https://docs.djangoproject.com/en/dev/ref/urlresolvers/#resolve) to get the answer:
+
+```
+import django
+django.setup()
+from django.urls import resolve
+print(resolve('/foo/bar/'))
+```
 
 ## Keep opening and closing tag together
 
