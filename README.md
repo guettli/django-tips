@@ -58,7 +58,12 @@ import django
 django.setup()
 from django.urls import resolve
 print(resolve('/foo/bar/'))
+
+--> ResolverMatch(func=foocms.views.bar_handler, args=('/foo/bar/',), kwargs={}, url_name=foocms, app_names=[], namespaces=[], route=^(.*)/$)
+
 ```
+
+Now you know that `foocms.views.bar_handler` will handle requests to the URL `/foo/bar/`.
 
 ## Keep opening and closing tag together
 
