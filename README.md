@@ -169,6 +169,15 @@ Avoid to support IE, and prefer to focus on development.
 
 [Google Trend "Selenium"](https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0c828v) is going down.
 
+## html_form_to_dict()
+
+I like to test my django applications like this:
+
+1. I use `reverse()` to get an URL
+1. I use the [pytest client](https://pytest-django.readthedocs.io/en/latest/helpers.html#client-django-test-client) to get a http response
+1. I use [html_form_to_dict()](https://github.com/guettli/html_form_to_dict) to get a dictionary of the form which is in `response.content`
+1. I use the `client.post(url, data)` to submit the form
+
 ## Fixtures
 
 Software test fixtures initialize test functions. They provide a fixed baseline so that tests execute reliably and produce consistent, repeatable, results. 
