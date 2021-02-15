@@ -171,12 +171,19 @@ Avoid to support IE, and prefer to focus on development.
 
 ## html_form_to_dict()
 
-I like to test my django applications like this:
+If possible, I test methods without a http request in a small unittest.
+
+On the other hand I would like to know if the html forms are usable by a web-browser.
+
+I like to test my django forms like this:
 
 1. I use `reverse()` to get an URL
 1. I use the [pytest client](https://pytest-django.readthedocs.io/en/latest/helpers.html#client-django-test-client) to get a http response
 1. I use [html_form_to_dict()](https://github.com/guettli/html_form_to_dict) to get a dictionary of the form which is in `response.content`
+1. I set some values on `data`
 1. I use the `client.post(url, data)` to submit the form
+
+For an example, please see the README of [html_form_to_dict()](https://github.com/guettli/html_form_to_dict)
 
 ## Fixtures
 
