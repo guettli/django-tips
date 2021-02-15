@@ -11,10 +11,7 @@ After you learned the basics (Python, some HTML, some CSS), then use the [Django
 Avoid ReactJS or Vue, since you might not need them. First start with the traditional approach: Create HTML on
 the server and send it to the web browser.
 
-If you want to use a CSS library, then use [Bootstrap5](https://getbootstrap.com/).
-
-Avoid JQuery. It is dead. Unfortunately a lot of code snippets and examples depend on it, but
-this will change during the next years.
+If you want to use a CSS library, then I recommend [Bootstrap5](https://getbootstrap.com/).
 
 You can start with SQLite, but sooner or later you should switch to PostgreSQL.
 
@@ -33,7 +30,7 @@ There is a nice article about how to integrate this into the admin: [Vitor Freit
 It is important to understand the difference between a project and an application in the context of Django.
 Please read [Projects and Applications](https://docs.djangoproject.com/en/3.1/ref/applications/#projects-and-applications)
 
-I always try to keep the project small. The project is a small container. It contains the app.
+I always try to keep the project small. The project is a small container. One projects contains several apps.
 The project contains settings, but almost no code.
 
 # Project `mysite`
@@ -46,9 +43,11 @@ files are almost identical between my different projects.
 # Templates
 
 ## Use CSS, not "cycle"
-Don't use (or try to understand) the [Django cycle](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#cycle) templatetag. Today you don't need to alter the css class to create cebra-tables. Vanialla CSS is enough.
+
+Don't use (or try to understand) the [Django cycle](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#cycle) templatetag. Today you don't need to alter the css class to create cebra-tables. Vanilla CSS is enough.
 
 ## How to debug Django's url resolving?
+
 If you are new to a big project, you might not easily see which view function does handle an URL.
 
 You can use [resolve()](https://docs.djangoproject.com/en/dev/ref/urlresolvers/#resolve) to get the answer:
@@ -91,49 +90,6 @@ foo/overview.html
 </table>
 ```
 
-## Global Constants (Brand)
-
-Imagine you have a setting called `brand` which is the name of your site. And since you develop re-usable software ([White-label product
-](https://en.wikipedia.org/wiki/White-label_product)) the brand is customizable.
-
-Usualy I would store this value in the database, but for customizing the django admin, it easier if the value is available before
-the databaes connection is made.
-
-settings.py
-```
-BRAND = 'foo'
-
-
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'OPTIONS': {
-            'context_processors': [
-               ...
-                'foo.context_processor.constants',  # make some global constants available in all templates
-```
-
-
-
-mysite/urls.py
-```
-
-admin.site.site_header = '{} Admin'.format(settings.BRAND)
-admin.site.index_title = '{} Admin'.format(settings.BRAND)
-admin.site.site_title = '{} Admin'.format(settings.BRAND)
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    ...
-```
-
-foo/context_processor.py
-```
-from django.conf import settings
-
-def constants(request):
-    return dict(brand=settings.BRAND)
-```
 
 # Django Debug Toolbar
 
@@ -145,7 +101,7 @@ in production.
 
 ## pytest-django for Unittests
 
-Use the library [pytest-django](https://github.com/pytest-dev/pytest-django). Their docs are good.
+I use the library [pytest-django](https://github.com/pytest-dev/pytest-django). Their docs are good.
 
 If you want to get an exception (as opposed to an empty string) if a template variable is unknown, then you can use this config:
 
@@ -160,14 +116,14 @@ FAIL_INVALID_TEMPLATE_VARS = True
 
 See [pytest-django docs "fail for invalid variables in templates](https://pytest-django.readthedocs.io/en/latest/usage.html#fail-on-template-vars-fail-for-invalid-variables-in-templates)
 
-Or you use [django-shouty-templates](https://pypi.org/project/django-shouty-templates/) which monkey-patches some django methods to shout as soon as there is something strange.
-
 ## Avoid Selenium Tests
 
 Selenium automates browsers. It can automated modern browsers and IE. It is flaky. It will randomly fail, and you will waste a lot of time.
 Avoid to support IE, and prefer to focus on development.
 
 [Google Trend "Selenium"](https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0c828v) is going down.
+
+I heared that PlayWright is modern solution to automate Chromium, Firefox and WebKit with a single API.
 
 ## html_form_to_dict()
 
@@ -215,12 +171,12 @@ To make your application load/submit HTML snippets (to avoid the full screen ref
 
 This way you have a simple stack which gives you a solid foundation for your application.
 
-# One Page, there forms
+# One Page, three forms
 
-You want to create one HTML page which should three forms. The Django forms library is great, but it does not solve this problem for you.
+You want to create one HTML page which contains three forms. The Django forms library is great, but it does not solve this problem for you.
 
 You could use [Prefixes for forms](https://docs.djangoproject.com/en/3.1/ref/forms/api/#prefixes-for-forms) and put your three django-forms
-into one big html `<form>`. Depending on the context, this often feels too heavy. 
+onto one big page. Depending on the context, this often feels too heavy. 
 
 That's where [htmx](#htmx) can help you: With htmx you can load/submit html fragments easily. No need to write a SPA (Single Page Application),
 but if you want to, htmx gives you all you need.
@@ -241,8 +197,7 @@ Or use a JS based solution. For example [d3](https://github.com/d3/d3)
 
 # Avoid request.user
 
-Imagine you write a page so that the user is able to edit his/her address. You used request.user and everything works fine. 
-
+Imagine you write a page so that the user is able to edit his/her address. You use request.user and everything works fine. 
 
 Now you want to make the same form available
 to a superuser, so that the superuser can edit the address of a user.
@@ -250,7 +205,7 @@ to a superuser, so that the superuser can edit the address of a user.
 Now things get mixed up. Because `request.user` is not longer the user of the address ....
 
 You can avoid the confusion if you avoid `request.user` and instead require that the caller explicitly gives you
-an user object.
+an `user` object.
 
 
 # Development Environment
@@ -259,10 +214,10 @@ In the past I had the whole stack installed in my local development environment 
 I don't do this any more. The `runserver` of Django is enough for development. You usualy don't need https during development, http is enough.
 
 This contradicts the guideline that the development environment and the production environment should be equal.
-Several years I used the same setup on dev and prod. But now I think runserver is enough. The runserver reloads code fast,
+The runserver reloads code fast,
 which is great for a fluent "edit test" cycle.
 
-I develop on Ubuntu Linux.
+I develop on Ubuntu Linux with PyCharm.
 
 But I use PostgreSQL even for development. If you use the same username for your PostgreSQL-user like for your
 Linux-user, then you don't need to configure a password for the database.
@@ -278,9 +233,12 @@ This way I can run several systems on one VPS. This means there are N gunicorn p
 
 As reverse proxy and https endpoint I use Nginx.
 
+Sooner or alter I will switch to containers, but at the moment my current setup works fine.
+
 # Django's Jobs vs Webserver's Jobs
 
 You should understand that's the job of the webserver to provide `https` (Certificates ...) or to compress the responses.
+
 It makes no sense to use the Django [GZipMiddleware](https://docs.djangoproject.com/en/dev/ref/middleware/#module-django.middleware.gzip).
 
 # Backup
@@ -306,7 +264,7 @@ But you need to dinstinguish between vague and specific questions.
 
 Ask in the [Django Forum](https://forum.djangoproject.com/) or in a Django Facebook Group. For example [Django Python Web Framework](https://www.facebook.com/groups/python.django)
 
-For example: "Which IDE should I use for ...". 
+For example: "Which library should I use for ...". 
 
 ## Specific Question?
 
@@ -323,12 +281,6 @@ If your code creates a stacktrace, then please add the whole stacktrace to the q
 
 Unfortunately not that cool like [state of js](https://stateofjs.com/) or [state of css](https://stateofcss.com/),
 but the Django Survey gives you a nice overview, too.
-
-# Deploy: PaaS
-
-* You can rent a VPS (Virtual Private Server). It is cheap. You can fiddle with ssh, vi and commandline tools to serve your application. Or you can use configuration management tools liks Ansible or Terraform.
-* You can rent a PaaS (Heroku, Azure, AWS, ...)
-* You can use an open source PaaS on your own VPS. See [Open Source PaaS List](https://github.com/guettli/open-source-paas)
 
 # FBV vs CBV
 
@@ -361,7 +313,7 @@ TypeError 'NoneType' object is not callable
 
 During development on your local machine you get a nice debug-view if there is an uncaught exception.
 
-On the production system you can a white page "Server Error (500)".
+On the production system you get a white page "Server Error (500)".
 
 And of course, you want to know if users of your site get server error.
 
@@ -369,23 +321,18 @@ Personally I prefer simple open source solutions to free and great commercial so
 
 It is simple to set up, is free and shows all uncaught exceptions in an easy to use web GUI.
 
-If someone knows an open source alternative, please let me know!
+And Sentry is a [Gold Corporate Member](https://www.djangoproject.com/foundation/corporate-members/) of the Django Software Foundation.
 
 # Uptime Monitoring
 
 Sentry won't help you, if there is something broken and your http server does not start. To be sure that your site is running you can use a free service.
 There are several, I use https://uptimerobot.com/
 
-They check your site every N minutes from outside via http.
+They check your site every N minutes from outside via https.
 
 # Page Speed
 
 You can use [Lighthouse](https://developers.google.com/web/tools/lighthouse) (via Chrome) or [PageSpeed Insights (Google)](https://developers.google.com/speed/pagespeed/insights/) to check your page.
-
-# Django settings.EMAIL_HOST
-
-If you get `(421, '4.7.0 Try again later, closing connection.')` while sending mails via `settings.EMAIL_HOST = 'smtp.gmail.com'`, then
-have a look at [this StackOverflow answer](https://stackoverflow.com/questions/65377421/django-force-ipv4-for-email-host-gmail-421-4-7-0-try-again-later-closing). It works if you use IPv4.
 
 # Software built with Django
 
@@ -410,6 +357,7 @@ https://github.com/xstatic-py/xstatic
 
 * [Güttli django-htmx-fun](https://github.com/guettli/django-htmx-fun) Small intro to htmx.
 * [Güttli's opinionated Python Tips](https://github.com/guettli/python-tips)
+* [Güttli, why I like PyCharm](https://github.com/guettli/why-i-like-pycharm/)
 * [Güttli working-out-loud](https://github.com/guettli/wol)
 
 
