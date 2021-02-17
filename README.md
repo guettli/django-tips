@@ -151,6 +151,46 @@ If I need data for a test, then I use [pytest fixtures](https://docs.pytest.org/
 
 And I don't see a reason to use a library like [factory-boy](https://factoryboy.readthedocs.io/en/stable/). Pytest and Django-ORM gives me all I need.
 
+# Django Typed Models
+
+[Django Typed Models](https://github.com/craigds/django-typed-models) brings [Single Table Inheritance](https://en.wikipedia.org/wiki/Single_Table_Inheritance) to Django.
+
+I like it for use-cases like this: Imagine you want to track the changes which get done by a user. The user creates an account,
+then the user adds his address. Later he creates an order, ....
+
+You could create a model like this:
+
+```Python
+class Log(models.Model):
+    user = models.ForeignKey(User)
+    time = models.DateTimeField(auto_add_now=True)
+    action = ....
+    data = models.JSONField()    
+```
+
+`action` could be a CharField with choices, or a ForeignKey to a Model which contains all the possible choices as rows.
+
+`data` stores the changes which fit to the specific action.
+
+Example: the action "Order Created" needs a link to the relevant offer.
+
+Every action has its own data schema.... Things get fuzzy if you use JSON.
+
+OR you could use Single Table Inheritance:
+
+```Python
+class Log(TypedModel):
+    user = models.ForeignKey(User)
+    time = models.DateTimeField(auto_add_now=True)
+
+class OrderCreatedLog(Log):
+    offer = models.ForeignKey(Offer)
+```    
+
+This way you don't need JSON, you can use database column to store the values.
+
+
+
 # Django Packages Overview
 
 [djangopackages.org](https://djangopackages.org/)
