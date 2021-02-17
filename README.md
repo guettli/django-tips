@@ -116,6 +116,15 @@ FAIL_INVALID_TEMPLATE_VARS = True
 
 See [pytest-django docs "fail for invalid variables in templates](https://pytest-django.readthedocs.io/en/latest/usage.html#fail-on-template-vars-fail-for-invalid-variables-in-templates)
 
+## Output in Tests is cut
+
+The output in tests is often cut, and you want to see the whole data?
+
+You can help yourself by temporary adding this snippet to your test:
+```Python
+    with open('/tmp/o', 'wb') as f:
+        f.write(response.content)
+```
 ## Avoid Selenium Tests
 
 Selenium automates browsers. It can automated modern browsers and IE. It is flaky. It will randomly fail, and you will waste a lot of time.
