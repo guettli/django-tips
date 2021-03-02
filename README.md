@@ -400,6 +400,7 @@ https://github.com/xstatic-py/xstatic
 
 * [Güttli django-htmx-fun](https://github.com/guettli/django-htmx-fun) Small intro to htmx.
 * [Güttli's opinionated Python Tips](https://github.com/guettli/python-tips)
+* [Güttli's Programming Guidelines](https://github.com/guettli/programming-guidelines)
 * [Güttli, why I like PyCharm](https://github.com/guettli/why-i-like-pycharm/)
 * [Güttli working-out-loud](https://github.com/guettli/wol)
 
