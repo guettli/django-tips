@@ -392,6 +392,9 @@ Example: include a JS library like Bootstrap:
 
 https://github.com/xstatic-py/xstatic
 
+# Blogs
+
+* [Adam Johnson](https://adamj.eu/tech/)
 
 # Related
 
