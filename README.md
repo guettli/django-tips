@@ -189,6 +189,11 @@ class OrderCreatedLog(Log):
 
 This way you don't need JSON, you can use database column to store the values.
 
+# Signal on changed fields
+
+[django-fieldsignals](https://github.com/craigds/django-fieldsignals) is a handy library, so
+that you can easily receive a signal if a field of a model has changed.
+
 
 
 # Django Packages Overview
