@@ -286,6 +286,8 @@ You should understand that's the job of the webserver to provide `https` (Certif
 
 It makes no sense to use the Django [GZipMiddleware](https://docs.djangoproject.com/en/dev/ref/middleware/#module-django.middleware.gzip).
 
+Redirecting from www.example.com to example.com is the job of a webserver, don't write a middleware for this.
+
 # Backup
 
 First I run pg_dump, then [timegaps](https://pypi.org/project/timegaps/) to remove outdated dumps, then rsync to a second VPS.
