@@ -329,6 +329,13 @@ If your code creates a stacktrace, then please add the whole stacktrace to the q
 Unfortunately not that cool like [state of js](https://stateofjs.com/) or [state of css](https://stateofcss.com/),
 but the Django Survey gives you a nice overview, too.
 
+# Forms
+
+I like the Django Forms Library. I don' use third party packages like crispy forms.
+
+Rule of thumb: Don't access request.GET or request.POST. Always use a form to retrieve the values from the request.
+
+
 # FBV vs CBV
 
 "Function based Views" vs "Class based Views".
@@ -355,6 +362,14 @@ TypeError 'NoneType' object is not callable
  
  It will need some time to detect the root-cause. In this example the reason is a typo. You need to use `form_class = MyForm`.
 
+# Misc
+
+* [get_object_or_404()](https://docs.djangoproject.com/en/dev/topics/http/shortcuts/#get-object-or-404) is handy.
+
+# CSRF token is not needed.
+
+If you use the default of [SESSION_COOKIE_SAMESITE](https://docs.djangoproject.com/en/dev/ref/settings/#session-cookie-samesite), then
+you don't need a CSRF token. 
 
 # Uncaught Exception Handling: Sentry
 
