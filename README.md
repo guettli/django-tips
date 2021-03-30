@@ -408,6 +408,10 @@ You can use [Lighthouse](https://developers.google.com/web/tools/lighthouse) (vi
 
 In ModelForm it is called "instance". In a class-based-view it is called "object". In Admin templates it is called "original". It would be nice to have **one** term for the thing.
 
+Don't ask me why in [reverse()](https://docs.djangoproject.com/en/3.1/ref/urlresolvers/#reverse) method is called "url" in Django templates.
+
+The Django template language hides errors. I prefer [format_html()](https://docs.djangoproject.com/en/3.1/ref/utils/#django.utils.html.format_html)
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
