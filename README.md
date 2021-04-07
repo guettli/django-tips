@@ -72,7 +72,32 @@ Third party panel for DDT:
 
 * https://github.com/mikekeda/django-debug-toolbar-line-profiler/
 
+## Connect to production DB (read-only)
 
+Sometimes you want to check some code against the production DB just for testing.
+
+Getting changes through CI would take too long.
+
+You can connect you local Django to the production DB, **and** make the connection
+read-only.
+
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': ...
+        'USER': ...
+        'PASSWORD': ...
+        'OPTIONS': {
+            'options': '-c default_transaction_read_only=on'
+        }
+    }
+}
+```
+
+Now you can run your local code connected to the production DB, and be sure that you don't break things.
+
+See: https://stackoverflow.com/a/66986980/633961
 ## Keep opening and closing tag together
 
 foo/start-overview.html
