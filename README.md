@@ -64,6 +64,15 @@ print(resolve('/foo/bar/'))
 
 Now you know that `foocms.views.bar_handler` will handle requests to the URL `/foo/bar/`.
 
+## Django Debug Toolbar.
+
+The DDT is great.
+
+Third party panel for DDT:
+
+* https://github.com/mikekeda/django-debug-toolbar-line-profiler/
+
+
 ## Keep opening and closing tag together
 
 foo/start-overview.html
