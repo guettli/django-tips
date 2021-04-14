@@ -426,6 +426,12 @@ There are several, I use https://uptimerobot.com/
 
 They check your site every N minutes from outside via https.
 
+# Cache for ever.
+
+New content, new URL.
+
+[django-storages](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html) `AWS_S3_FILE_OVERWRITE = False` forces you to use create+delete instead of updating content.
+
 # Page Speed
 
 You can use [Lighthouse](https://developers.google.com/web/tools/lighthouse) (via Chrome) or [PageSpeed Insights (Google)](https://developers.google.com/speed/pagespeed/insights/) to check your page.
