@@ -446,6 +446,13 @@ Don't ask me why in [reverse()](https://docs.djangoproject.com/en/3.1/ref/urlres
 
 The Django template language hides errors. I prefer [format_html()](https://docs.djangoproject.com/en/3.1/ref/utils/#django.utils.html.format_html)
 
+# Migrations
+
+Don't change old migrations which you already pushed to a central repository. It is likely that someone already pulled your changes into his
+development environment. This developer will have trouble if you change the old migration. Create a new migration which fixes the error of the
+old migration.
+
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
