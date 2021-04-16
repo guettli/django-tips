@@ -454,10 +454,22 @@ The Django template language hides errors. I prefer [format_html()](https://docs
 
 # Migrations
 
+## Don't change old migrations
+
 Don't change old migrations which you already pushed to a central repository. It is likely that someone already pulled your changes into his
 development environment. This developer will have trouble if you change the old migration. Create a new migration which fixes the error of the
 old migration.
 
+## Linear Migrations
+
+If you develop in a team you will sooner or later get trouble with your migrations, because two developers create a new mgiration
+in their branch. The CI for each branch is fine, but after merging both to the main branch you have two migrations with the same number.
+
+[django-linear-migrations](https://pypi.org/project/django-linear-migrations/) helps you. At least you know during merging that there is a conflict.
+
+The solution is simple:
+
+> It does this by creating new files in your apps’ migration directories, called max_migration.txt. These files contain the latest migration name for that app, and are automatically updated by makemigrations.
 
 # Dependecies to non-Python packages
 
