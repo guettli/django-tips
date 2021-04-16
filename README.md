@@ -462,14 +462,16 @@ old migration.
 
 ## Linear Migrations
 
-If you develop in a team you will sooner or later get trouble with your migrations, because two developers create a new mgiration
-in their branch. The CI for each branch is fine, but after merging both to the main branch you have two migrations with the same number.
+If you develop in a team you will sooner or later get trouble with your migrations, because two developers create a new migration
+in their branch. The CI for each branch is fine, but after merging both to the main branch you have two migrations with the same number. Grrr
 
 [django-linear-migrations](https://pypi.org/project/django-linear-migrations/) helps you. At least you know during merging that there is a conflict.
 
 The solution is simple:
 
 > It does this by creating new files in your apps’ migration directories, called max_migration.txt. These files contain the latest migration name for that app, and are automatically updated by makemigrations.
+
+Big thank you to Adam Chainz for this package.
 
 # Dependecies to non-Python packages
 
