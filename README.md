@@ -223,6 +223,13 @@ class OrderCreatedLog(Log):
 
 This way you don't need JSON, you can use database column to store the values.
 
+# Check HTML Middleware
+
+I wrote a small Check HTML Middleware, so that typos in HTML get detected soon:
+
+[django-check-html-middleware](https://github.com/guettli/django-check-html-middleware)
+
+
 # Signal on changed fields
 
 [django-fieldsignals](https://github.com/craigds/django-fieldsignals) is a handy library, so
