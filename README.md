@@ -480,6 +480,12 @@ The solution is simple:
 
 Big thank you to Adam Chainz for this package.
 
+# Raw SQL Queries
+
+Since the ORM solves most use-cases many developers don't use raw SQL queries in Django. This does not mean they are "evil".
+
+If a raw SQL query is easier to understand than the ORM counterpart (and there is a test for it), then go for SQL.
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
