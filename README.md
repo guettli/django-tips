@@ -486,6 +486,12 @@ Since the ORM solves most use-cases many developers don't use raw SQL queries in
 
 If a raw SQL query is easier to understand than the ORM counterpart (and there is a test for it), then go for SQL.
 
+But of course you should be aware of SQL-injection and use parameters like documented:
+
+```
+Person.objects.raw('SELECT * FROM myapp_person WHERE last_name = %s', [lname])
+```
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
