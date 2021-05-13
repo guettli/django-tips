@@ -124,6 +124,20 @@ foo/overview.html
 </table>
 ```
 
+# dot-env
+
+settings.py
+
+```
+from dotenv import load_dotenv
+from distutils.util import strtobool
+
+load_dotenv()
+DEBUG = strtobool(os.getenv('DEBUG'))
+...
+
+```
+
 
 # Django Debug Toolbar
 
