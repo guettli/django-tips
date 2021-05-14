@@ -498,6 +498,9 @@ Big thank you to Adam Chainz for this package.
 
 Since the ORM solves most use-cases many developers don't use raw SQL queries in Django. This does not mean they are "evil".
 
+With the help of [Subquery](https://docs.djangoproject.com/en/dev/ref/models/expressions/#subquery-expressions) and [OuterRef](https://docs.djangoproject.com/en/dev/ref/models/expressions/#django.db.models.OuterRef) complex queries are possible. But
+nevertheless, I think SQL is more readable than ORM queries containing `OuterRef(OuterRef(...))`.
+
 If a raw SQL query is easier to understand than the ORM counterpart (and there is a test for it), then go for SQL.
 
 But of course you should be aware of SQL-injection and use parameters like documented:
