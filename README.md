@@ -343,6 +343,12 @@ It makes no sense to use the Django [GZipMiddleware](https://docs.djangoproject.
 
 Redirecting from www.example.com to example.com is the job of a webserver, don't write a middleware for this.
 
+# Full text search
+
+PostgreSQL can do full text search, and Django supports it: [PG full text search](https://docs.djangoproject.com/en/dev/ref/contrib/postgres/search/)
+
+You make your life easier, if you avoid a second system (for example ElasticSearch).
+
 # Backup
 
 First I run pg_dump, then [timegaps](https://pypi.org/project/timegaps/) to remove outdated dumps, then rsync to a second VPS.
