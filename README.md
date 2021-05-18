@@ -396,6 +396,12 @@ I like the Django Forms Library. I don' use third party packages like crispy for
 
 Rule of thumb: Don't access request.GET or request.POST. Always use a form to retrieve the values from the request.
 
+# ORM: No Manager methods
+
+I know [Adding extra manager methods](https://docs.djangoproject.com/en/dev/topics/db/managers/#custom-managers). But I don't like it.
+
+I prefer to write a `@classmethod` if you want to return custom querysets.
+
 
 # FBV vs CBV
 
