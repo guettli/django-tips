@@ -400,7 +400,7 @@ Rule of thumb: Don't access request.GET or request.POST. Always use a form to re
 
 I know [Adding extra manager methods](https://docs.djangoproject.com/en/dev/topics/db/managers/#custom-managers). But I don't like it.
 
-I prefer to write a `@classmethod` if you want to return custom querysets.
+I prefer to write a `@classmethod` if I want to return a custom querysets.
 
 
 # FBV vs CBV
