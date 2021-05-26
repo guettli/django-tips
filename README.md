@@ -521,6 +521,11 @@ But of course you should be aware of SQL-injection and use parameters like docum
 Person.objects.raw('SELECT * FROM myapp_person WHERE last_name = %s', [lname])
 ```
 
+# Deployment
+
+The official Django docs have some text about how to deploy Django. But many details are missing. That's perfectly fine,
+since there are too many ways to deploy Django. If you looking for best practices, then have a look at te Django Cookiecutter project. For example: [django deployment with docker](https://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html)
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
