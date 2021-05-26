@@ -335,13 +335,21 @@ As reverse proxy and https endpoint I use Nginx.
 
 Sooner or alter I will switch to containers, but at the moment my current setup works fine.
 
-# Django's Jobs vs Webserver's Jobs
+# Django's Jobs vs Webserver's Jobs: GZipMiddleware
+
 
 You should understand that's the job of the webserver to provide `https` (Certificates ...) or to compress the responses.
 
 It makes no sense to use the Django [GZipMiddleware](https://docs.djangoproject.com/en/dev/ref/middleware/#module-django.middleware.gzip).
 
 Redirecting from www.example.com to example.com is the job of a webserver, don't write a middleware for this.
+
+# Django's Jobs vs Webserver's Jobs: SECURE_SSL_REDIRECT
+
+The setting [SECURE_SSL_REDIRECT](https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-SECURE_SSL_REDIRECT): I think
+redirecting from http to https should
+be done by the web-server, not by Django.
+
 
 # Full text search
 
