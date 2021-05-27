@@ -164,6 +164,10 @@ FAIL_INVALID_TEMPLATE_VARS = True
 
 See [pytest-django docs "fail for invalid variables in templates](https://pytest-django.readthedocs.io/en/latest/usage.html#fail-on-template-vars-fail-for-invalid-variables-in-templates)
 
+## django_assert_num_queries
+
+[django_assert_num_queries](https://pytest-django.readthedocs.io/en/latest/helpers.html#django-assert-num-queries) is handy, if you want to ensure that the number of SQL queries does not increase over time.
+
 ## Avoid Selenium Tests
 
 Selenium automates browsers. It can automated modern browsers and IE. It is flaky. It will randomly fail, and you will waste a lot of time.
