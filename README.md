@@ -37,8 +37,7 @@ The project contains settings, but almost no code.
 
 I always call the project `mysite`, like in the Django tutorial.
  
-This has the benefit that settings.py, pytest.ini, wsgi.py and many other
-files are almost identical between my different projects.
+This has the benefit that the env var `DJANGO_SETTINGS_MODULE` is always "mysite.settings" in all my personal projects.
 
 # Templates
 
