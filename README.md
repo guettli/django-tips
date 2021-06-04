@@ -530,6 +530,17 @@ But of course you should be aware of SQL-injection and use parameters like docum
 Person.objects.raw('SELECT * FROM myapp_person WHERE last_name = %s', [lname])
 ```
 
+# Serving private files
+
+Imagine you have private files which you don't want to serve via a CDN. You could use a hard to guess random
+string in the URL, but that's not a real solution.
+
+You can use the "x-sendfile" approach. This way you can do the authentication and permission checking in your
+Python code, and then let the webserver (for example Nginx) handle the slow work of sending the file over the wire.
+
+Setting the appropriate http headers is not hard. But you can use [django-sendfile2](https://github.com/moggers87/django-sendfile2), too.
+
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
