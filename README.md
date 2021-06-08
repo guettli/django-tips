@@ -540,6 +540,24 @@ Python code, and then let the webserver (for example Nginx) handle the slow work
 
 Setting the appropriate http headers is not hard. But you can use [django-sendfile2](https://github.com/moggers87/django-sendfile2), too.
 
+# Fast Inner Feedback Loop
+
+The inner feedback loop:
+
+1. Edit
+2. Save
+3. Compile
+4. Run
+5. Check result
+
+With Python and a modern IDE "Save" and "Compile" are not needed.
+
+Nevertheless it takes some time to see the result.
+
+If you are fiddling with HTML+CSS you might be faster if you edit the HTML+CSS directly in the browser. For example in devtools (Chrome).
+
+In most cases step "5. Check result" means to see if a test was successful or not. Test-Driven Development makes you faster in the long run.
+
 
 # Dependecies to non-Python packages
 
