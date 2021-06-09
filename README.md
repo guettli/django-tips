@@ -566,6 +566,12 @@ User.objects.filter(groups__isnull=False)
 
 Related: https://stackoverflow.com/questions/54367178/django-orm-all-users-which-have-at-least-one-group
 
+# Show SQL
+
+```
+User.objects.filter(...).query
+```
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
