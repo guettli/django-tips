@@ -558,6 +558,13 @@ If you are fiddling with HTML+CSS you might be faster if you edit the HTML+CSS d
 
 In most cases step "5. Check result" means to see if a test was successful or not. Test-Driven Development makes you faster in the long run.
 
+# ORM: All Users which are at least in one group:
+
+```
+User.objects.filter(groups__isnull=False)
+```
+
+Related: https://stackoverflow.com/questions/54367178/django-orm-all-users-which-have-at-least-one-group
 
 # Dependecies to non-Python packages
 
