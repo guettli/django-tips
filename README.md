@@ -572,6 +572,11 @@ Related: https://stackoverflow.com/questions/54367178/django-orm-all-users-which
 User.objects.filter(...).query
 ```
 
+# Disk-Cache instead of Redis
+
+[python-diskcache](https://github.com/grantjenks/python-diskcache) is an replacement for the [FileBasedCache](https://docs.djangoproject.com/en/dev/topics/cache/#filesystem-caching). For small projects you might need
+a Redis server.
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
