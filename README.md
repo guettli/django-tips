@@ -577,6 +577,18 @@ User.objects.filter(...).query
 [python-diskcache](https://github.com/grantjenks/python-diskcache) is an replacement for the [FileBasedCache](https://docs.djangoproject.com/en/dev/topics/cache/#filesystem-caching). For small projects you might need
 a Redis server.
 
+# Template Language
+
+## Comma separated list of HTML
+You want to list some hyperlinks separated by comma?
+```
+{% for obj in mylist %}
+ <a href="{{obj.get_absolute_url}}">{{obj}}</a>{% if not forloop.last %}, {% endif %}
+{% endfor %}
+```
+
+See ["for" in Built-in Template Language](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#for)
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
