@@ -589,6 +589,15 @@ You want to list some hyperlinks separated by comma?
 
 See ["for" in Built-in Template Language](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#for)
 
+# Not solved yet: Row based permissions
+
+Row based (AKA "per object permissions") are not easy. There are several solutions:
+
+[django-gardian](https://django-guardian.readthedocs.io/en/stable/) Drawback: Slow. See [Performance](https://django-guardian.readthedocs.io/en/stable/userguide/performance.html)
+
+Use [get_queryset() in the admin](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.get_queryset). This is
+fast and flexible. But does not distinguish between "read permissions" and "write permissions".
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
