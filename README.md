@@ -202,6 +202,25 @@ If I need data for a test, then I use [pytest fixtures](https://docs.pytest.org/
 
 And I don't see a reason to use a library like [factory-boy](https://factoryboy.readthedocs.io/en/stable/). Pytest and Django-ORM gives me all I need.
 
+# Keep models.py small
+
+The file `models.py` is a mixture. A mixture of schema definition and logic. That's handy and makes you fast at the beginning.
+
+But don't put too much logic into this file. Your subclasses of `Model` should only contain basic methods.
+
+Creating HTML and other stuff should live somewhere else.
+
+I usualy create a file per model: If the model is called `Foo`, then I create a file called `fooutils.py` which contains
+methods which get instance of the class `Foo` as first argument.
+
+Example for a model called `Customer`:
+
+```
+# customerutils.py
+
+def create_weekly_report(customer):
+    ...
+```
 # Django Typed Models
 
 [Django Typed Models](https://github.com/craigds/django-typed-models) brings [Single Table Inheritance](https://en.wikipedia.org/wiki/Single_Table_Inheritance) to Django.
