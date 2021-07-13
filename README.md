@@ -19,11 +19,8 @@ My hint: Don't dive too deep into JavaScript. It is less important than most peo
 
 # How to extend the user model in Django?
 
-The answer is simple: Don't extend the Django user model via inheritance and don't replace the original implementation.
-
-Just use a [OneToOneField](https://docs.djangoproject.com/en/dev/ref/models/fields/#django.db.models.OneToOneField)
-
-There is a nice article about how to integrate this into the admin: [Vitor Freitas "How to Add User Profile To Django Admin"](https://simpleisbetterthancomplex.com/tutorial/2016/11/23/how-to-add-user-profile-to-django-admin.html)
+According to Vitor Freitas: "always replace the default User model" 
+[What You Should Know About The Django User Model](https://simpleisbetterthancomplex.com/article/2021/07/08/what-you-should-know-about-the-django-user-model.html)
 
 # Project vs App
 
