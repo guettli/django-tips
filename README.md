@@ -593,6 +593,14 @@ User.objects.filter(...).query
 [python-diskcache](https://github.com/grantjenks/python-diskcache) is an replacement for the [FileBasedCache](https://docs.djangoproject.com/en/dev/topics/cache/#filesystem-caching). For small projects you might need
 a Redis server.
 
+# PostgreSQL Extensions
+
+[django.contrib.postgres](https://docs.djangoproject.com/en/dev/ref/contrib/postgres/) has some nice features.
+
+For example:
+
+* [CICharField](https://docs.djangoproject.com/en/dev/ref/contrib/postgres/fields/#django.contrib.postgres.fields.CICharField) Case-insensitive CharField
+
 # Template Language
 
 ## Comma separated list of HTML
