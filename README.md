@@ -430,29 +430,17 @@ I prefer to write a `@classmethod` if I want to return a custom querysets.
 
 # FBV vs CBV
 
-"Function based Views" vs "Class based Views".
+"Function based Views" vs "Class based Views"?
 
-I like both.
+Since I switched to [htmx.org](//htmx.org) I prefer FBV.
 
-CBV have some draw-back. If something does not work the way you want, then it is harder to debug the root-cause.
+> You don’t need to learn any of the CBV APIs - TemplateView, ListView, DetailView, FormView, 
+> MultipleObjectMixin etc. etc. and all their inheritance trees or method flowcharts. 
+> They will only make your life harder.You don’t need to learn any of the CBV APIs -
+> TemplateView, ListView, DetailView, FormView, MultipleObjectMixin etc. etc. 
+> and all their inheritance trees or method flowcharts. They will only make your life harder.
 
-Example:
-
-```
-class MyView(FormView):
-    form = MyForm
-```
-
-This will give you:
-
-```
-TypeError 'NoneType' object is not callable
-
-.../django/views/generic/edit.py, line 33, in get_form
- return form_class(**self.get_form_kwargs()) 
- ```
- 
- It will need some time to detect the root-cause. In this example the reason is a typo. You need to use `form_class = MyForm`.
+Source: [Dajngo Views - The Right Way](https://spookylukey.github.io/django-views-the-right-way/index.html) by Luke Plant.
 
 # Misc
 
