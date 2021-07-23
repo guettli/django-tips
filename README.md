@@ -536,6 +536,9 @@ Person.objects.raw('SELECT * FROM myapp_person WHERE last_name = %s', [lname])
 
 Espescialy in data migrations I often prefer SQL to ORM.
 
+As a Django developer you might feel more comfortable with the ORM than with SQL. I know. But look at the whole plant earth, then
+there are far more people who know SQL than people who now the Django ORM.
+
 # Serving private files
 
 Imagine you have private files which you don't want to serve via a CDN. You could use a hard to guess random
