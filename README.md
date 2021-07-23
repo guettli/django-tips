@@ -531,9 +531,9 @@ The solution is simple:
 
 Big thank you to Adam Chainz for this package.
 
-# Raw SQL Queries
+# SQL is great
 
-Since the ORM solves most use-cases many developers don't use raw SQL queries in Django. This does not mean they are "evil".
+Since the ORM solves most use-cases many developers don't use raw SQL queries in Django. This does not mean SQL is "evil". SQL is great!
 
 With the help of [Subquery](https://docs.djangoproject.com/en/dev/ref/models/expressions/#subquery-expressions) and [OuterRef](https://docs.djangoproject.com/en/dev/ref/models/expressions/#django.db.models.OuterRef) complex queries are possible. But
 nevertheless, I think SQL is more readable than ORM queries containing `OuterRef(OuterRef(...))`.
@@ -545,6 +545,8 @@ But of course you should be aware of SQL-injection and use parameters like docum
 ```
 Person.objects.raw('SELECT * FROM myapp_person WHERE last_name = %s', [lname])
 ```
+
+Espescialy in data migrations I often prefer SQL to ORM.
 
 # Serving private files
 
