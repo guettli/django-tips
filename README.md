@@ -440,7 +440,7 @@ Since I switched to [htmx.org](//htmx.org) I prefer FBV.
 > TemplateView, ListView, DetailView, FormView, MultipleObjectMixin etc. etc. 
 > and all their inheritance trees or method flowcharts. They will only make your life harder.
 
-Source: [Dajngo Views - The Right Way](https://spookylukey.github.io/django-views-the-right-way/index.html) by Luke Plant.
+Source: [Django Views - The Right Way](https://spookylukey.github.io/django-views-the-right-way/index.html) by Luke Plant.
 
 # Misc
 
