@@ -596,6 +596,14 @@ For example:
 
 # Template Language
 
+# Task Queue
+
+I like to have all valuable data in PostgreSQL. That's why I like to tasks in the DB (and not in Redis or RabbitMQ).
+
+[djanog-db-queue](https://github.com/dabapps/django-db-queue)
+
+
+
 ## Comma separated list of HTML
 You want to list some hyperlinks separated by comma?
 ```
