@@ -583,7 +583,7 @@ User.objects.filter(...).query
 
 # Disk-Cache instead of Redis
 
-[python-diskcache](https://github.com/grantjenks/python-diskcache) is an replacement for the [FileBasedCache](https://docs.djangoproject.com/en/dev/topics/cache/#filesystem-caching). For small projects you might need
+[python-diskcache](https://github.com/grantjenks/python-diskcache) is an replacement for the [FileBasedCache](https://docs.djangoproject.com/en/dev/topics/cache/#filesystem-caching). For small projects you might not need
 a Redis server.
 
 # PostgreSQL Extensions
