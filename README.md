@@ -326,6 +326,13 @@ Now things get mixed up. Because `request.user` is not longer the user of the ad
 You can avoid the confusion if you avoid `request.user` and instead require that the caller explicitly gives you
 an `user` object.
 
+It is perfectly fine to store the current user in a threadlocal variable. But just use this global user for permission checking.
+
+# Don't give a customer `is_superuser`
+
+Don't give a customer `is_superuser`. Give him `is_staff` and Permissions. 
+
+Sooner or later you want to add functionality which should be only available to you (the SaaS maintainer).
 
 # Development Environment
 
