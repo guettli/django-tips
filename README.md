@@ -640,6 +640,17 @@ https://github.com/xstatic-py/xstatic
 
 * [Adam Johnson](https://adamj.eu/tech/)
 
+# manage command to check state?
+
+Not all invalid states can be avoided by database contstraints. Nevertheless you want to check that
+everything is in a valid state.
+
+You could write a custom manage command for this. See [custom management commands](https://docs.djangoproject.com/en/dev/howto/custom-management-commands/).
+
+But I think it makes more sense to write a view which returns a HTML page and a corresponding http status code.
+
+HTML gives you much more freedom. For example you can create tables, which you can't if you use text output.
+
 # Related
 
 * [Güttli django-htmx-fun](https://github.com/guettli/django-htmx-fun) Small intro to htmx.
