@@ -337,15 +337,15 @@ Sooner or later you want to add functionality which should be only available to 
 # Development Environment
 
 In the past I had the whole stack installed in my local development environment (Apache or Nginx/Gunicorn), but
-I don't do this any more. The `runserver` of Django is enough for development. You usualy don't need https during development, http is enough.
+I don't do this any more. The `runserver` of Django is enough for development. You usualy don't need https during development.
 
-This contradicts the guideline that the development environment and the production environment should be equal.
-The runserver reloads code fast,
-which is great for a fluent "edit test" cycle.
+This contradicts the guideline that the development environment and the production environment should be as similar as possible.
+
+The runserver reloads code fast, which is great for a fluent "edit test" cycle.
 
 I develop on Ubuntu Linux with PyCharm.
 
-But I use PostgreSQL even for development. If you use the same username for your PostgreSQL-user like for your
+But I use PostgreSQL on production and for development. If you use the same username for your PostgreSQL-user like for your
 Linux-user, then you don't need to configure a password for the database.
 
 # Production Environment
