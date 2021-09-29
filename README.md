@@ -330,6 +330,14 @@ an `user` object.
 
 It is perfectly fine to store the current user in a threadlocal variable. But just use this global user for permission checking.
 
+# Global request middleware
+
+Up to now I use a global request middleware. But I am not happy with it. I will use a global user middleware in the future.
+
+This way I can check for permission without passing the request to every method which will be called during handling the http-request.
+
+But making the request available via a global variable is too much implicit input to methods. 
+
 # Don't give a customer `is_superuser`
 
 Don't give a customer `is_superuser`. Give him `is_staff` and Permissions. 
