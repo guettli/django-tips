@@ -199,6 +199,8 @@ If I need data for a test, then I use [pytest fixtures](https://docs.pytest.org/
 
 And I don't see a reason to use a library like [factory-boy](https://factoryboy.readthedocs.io/en/stable/). Pytest and Django-ORM gives me all I need.
 
+I avoid creating random data. I don't use libraries like [faker](https://github.com/joke2k/faker). I want things to be repeatable and predictable.
+
 # Keep models.py small
 
 The file `models.py` is a mixture. A mixture of schema definition and logic. That's handy and makes you fast at the beginning.
