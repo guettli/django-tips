@@ -640,6 +640,22 @@ Row based (AKA "per object permissions") are not easy. There are several solutio
 Use [get_queryset() in the admin](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.get_queryset). This is
 fast and flexible. But does not distinguish between "read permissions" and "write permissions".
 
+# Not solved yet: Set operations on admin results.
+
+The django admin has filters so you can filter your models.
+
+I would like to have set operations:
+
+Create a set with the admin filters. Store this list.
+
+Then do a send filter. Then do set operations on both lists:
+
+* A minus B
+* A plus B
+* B minus A
+* Intersection of A and B.
+* ....
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
