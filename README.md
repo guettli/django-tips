@@ -656,6 +656,20 @@ Then do a send filter. Then do set operations on both lists:
 * Intersection of A and B.
 * ....
 
+# Not solved yet: Generic way to check if a user is allowed to access a view
+
+Imagine you want to render a hyperlink, if a user is allowed to access this view.
+But if the user is not allowed to access the hyperlink, then you want to display
+some text.
+
+Of course you can handle this on your own. This is easy if the view and the code
+which creates the hyperlink are under your control. Django gives you all the tools to solve
+this.
+
+But there is no generic way of doing this. If the view is third party code, then
+it is likely that permission checking gets done inside the view. Then you can't check
+if the user is allowed or not access the page without calling the view.
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
