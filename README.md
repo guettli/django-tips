@@ -613,6 +613,8 @@ For example:
 
 # Template Language
 
+I like to create HTML with [format_html()](https://docs.djangoproject.com/en/dev/ref/utils/#django.utils.html.format_html)
+
 # Task Queue
 
 I like to have all valuable data in PostgreSQL. That's why I like to tasks in the DB (and not in Redis or RabbitMQ).
@@ -675,6 +677,13 @@ if the user is allowed or not access the page without calling the view.
 Example: include a JS library like Bootstrap:
 
 https://github.com/xstatic-py/xstatic
+
+# Testing: Ensure your number of SQL queries does not increase
+
+[django-perf-rec](https://pypi.org/project/django-perf-rec/)
+
+> django-perf-rec is like Django’s assertNumQueries on steroids. It lets you track the individual queries and cache operations that occur in your code. It stores a YAML file alongside the test file that tracks the queries and operations.
+
 
 # Blogs
 
