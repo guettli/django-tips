@@ -672,6 +672,14 @@ But there is no generic way of doing this. If the view is third party code, then
 it is likely that permission checking gets done inside the view. Then you can't check
 if the user is allowed or not access the page without calling the view.
 
+# Not solve yet: Building URL including protocol outside a request handler
+
+If you have a request, then it is easy: [request.build_absolute_uri()](https://docs.djangoproject.com/en/dev/ref/request-response/#django.http.HttpRequest.build_absolute_uri).
+
+But in a command line script, you don't have a request.
+
+AFAIK there is no standard way. See [How can I get the URL (with protocol and domain) in Django (without request)?](https://stackoverflow.com/questions/34989031/how-can-i-get-the-url-with-protocol-and-domain-in-django-without-request)
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
