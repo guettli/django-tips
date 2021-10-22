@@ -642,6 +642,8 @@ Row based (AKA "per object permissions") are not easy. There are several solutio
 Use [get_queryset() in the admin](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.get_queryset). This is
 fast and flexible. But does not distinguish between "read permissions" and "write permissions".
 
+[Video of Madelaine Boyd about row based permissions](https://www.youtube.com/watch?v=1NGGmHZJvyU)
+
 # Not solved yet: Set operations on admin results.
 
 The django admin has filters so you can filter your models.
