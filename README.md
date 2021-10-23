@@ -698,6 +698,10 @@ https://github.com/xstatic-py/xstatic
 
 [Dan Palmer - Scaling Django to 500 apps](https://youtu.be/NsHo-kThlqI)
 
+# Upgrading 100+ Repositories
+
+[Jeremy Bowman - Herding Ponies: Coordinating and Automating Django Upgrades Across 100+ Repositories]([https://www.youtube.com/watch?v=ny-3AaNHbbs)
+
 # Blogs
 
 * [Adam Johnson](https://adamj.eu/tech/)
