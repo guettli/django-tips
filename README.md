@@ -694,6 +694,9 @@ https://github.com/xstatic-py/xstatic
 
 > django-perf-rec is like Django’s assertNumQueries on steroids. It lets you track the individual queries and cache operations that occur in your code. It stores a YAML file alongside the test file that tracks the queries and operations.
 
+# 500 Apps instead of Microservices
+
+[Dan Palmer - Scaling Django to 500 apps](https://youtu.be/NsHo-kThlqI)
 
 # Blogs
 
