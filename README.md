@@ -611,6 +611,9 @@ For example:
 
 * [CICharField](https://docs.djangoproject.com/en/dev/ref/contrib/postgres/fields/#django.contrib.postgres.fields.CICharField) Case-insensitive CharField
 
+[django-pghistory](https://github.com/Opus10/django-pghistory) record changes to models via PostgreSQL triggers.
+
+
 # Template Language
 
 I like to create HTML with [format_html()](https://docs.djangoproject.com/en/dev/ref/utils/#django.utils.html.format_html)
