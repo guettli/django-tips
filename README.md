@@ -164,7 +164,7 @@ See [pytest-django docs "fail for invalid variables in templates](https://pytest
 
 [django_assert_num_queries](https://pytest-django.readthedocs.io/en/latest/helpers.html#django-assert-num-queries) is handy, if you want to ensure that the number of SQL queries does not increase over time.
 
-## Avoid Selenium Tests
+## Avoid Selenium/Playwright Tests
 
 Selenium automates browsers. It can automated modern browsers and IE. It is flaky. It will randomly fail, and you will waste a lot of time.
 Avoid to support IE, and prefer to focus on development.
@@ -200,6 +200,20 @@ If I need data for a test, then I use [pytest fixtures](https://docs.pytest.org/
 And I don't see a reason to use a library like [factory-boy](https://factoryboy.readthedocs.io/en/stable/). Pytest and Django-ORM gives me all I need.
 
 I avoid creating random data. I don't use libraries like [faker](https://github.com/joke2k/faker). I want things to be repeatable and predictable.
+
+## Edit-Test Cycle via runserver and ctrl-r?
+
+I know coding and testing your changes manually via runserver and ctrl-r in browser is like a magnet. Even if you know that test-driven-development is
+better you will get trapped in the "edit, ctrl-r" loop.
+
+What do you mean with "edit ctrl-r" loop? It works like this: You edit your source code, and then your use the browser
+to see if your changes have the desired effect. And looking at your changes happens by using your browser.
+
+This works, but has one draw-back: After you got your code change done, you have no automated test. You did manually testing, and it is likely
+that someone will break the things you implemented in your change.
+
+This loop makes you faster in the long run: "Edit, run automated test".
+
 
 # Keep models.py small
 
