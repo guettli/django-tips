@@ -38,6 +38,12 @@ This has the benefit that the env var `DJANGO_SETTINGS_MODULE` is always "mysite
 
 # Templates
 
+## I don't trust the django template language
+
+Errors get silently ignored by the django template language. I avoid it. 
+
+I like to create small html snippets with [format_html()](https://docs.djangoproject.com/en/dev/ref/utils/#django.utils.html.format_html).
+
 ## Use CSS, not "cycle"
 
 Don't use (or try to understand) the [Django cycle](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#cycle) templatetag. Today you don't need to alter the css class to create cebra-tables. Vanilla CSS is enough.
