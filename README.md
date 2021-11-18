@@ -699,7 +699,7 @@ But there is no generic way of doing this. If the view is third party code, then
 it is likely that permission checking gets done inside the view. Then you can't check
 if the user is allowed or not access the page without calling the view.
 
-# Not solve yet: Building URL including protocol outside a request handler
+# Not solved yet: Building URL including protocol outside a request handler
 
 If you have a request, then it is easy: [request.build_absolute_uri()](https://docs.djangoproject.com/en/dev/ref/request-response/#django.http.HttpRequest.build_absolute_uri).
 
