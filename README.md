@@ -205,7 +205,7 @@ If I need data for a test, then I use [pytest fixtures](https://docs.pytest.org/
 
 It is unfortunate that the term "fixture" has two completely different meanings in the django terminology. I never use django-fixtures, but use pytest-fixtures daily.
 
-And I don't see a reason to use a library like [factory-boy](https://factoryboy.readthedocs.io/en/stable/). Pytest and Django-ORM gives me all I need.
+And I don't see a reason to use a library like [factory-boy](https://factoryboy.readthedocs.io/en/stable/). I prefer [pytest fixtures](https://docs.pytest.org/en/stable/fixture.html). Pytest fixtures and Django-ORM gives me all I need.
 
 I avoid creating random data. I don't use libraries like [faker](https://github.com/joke2k/faker). I want things to be repeatable and predictable.
 
