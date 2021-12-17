@@ -44,6 +44,11 @@ Errors get silently ignored by the django template language. I avoid it.
 
 I like to create small html snippets with [format_html()](https://docs.djangoproject.com/en/dev/ref/utils/#django.utils.html.format_html).
 
+I love Python methods. They are simple to write, easy to understand and exceptions show a nice stacktrace.
+
+But if you use the template language, you can not easily mix custom template tags with custom template filters. Example: https://stackoverflow.com/a/12249207/633961
+
+
 ## Use CSS, not "cycle"
 
 Don't use (or try to understand) the [Django cycle](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#cycle) templatetag. Today you don't need to alter the css class to create cebra-tables. Vanilla CSS is enough.
