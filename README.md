@@ -143,7 +143,8 @@ DEBUG = strtobool(os.getenv('DEBUG'))
 
 The [Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/) is really useful.
 
-For small projects it is even fine to enable it in production via [SHOW_TOOLBAR_CALLBACK](https://django-debug-toolbar.readthedocs.io/en/latest/configuration.html#show-toolbar-callback).
+For small projects it is even fine to enable it in production via [SHOW_TOOLBAR_CALLBACK](https://django-debug-toolbar.readthedocs.io/en/latest/configuration.html#show-toolbar-callback). Example: The toolbar gets shown, only
+if the URL contains `_debug=SomeMagicString`.
 
 Third party panel for DDT:
 
