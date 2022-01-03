@@ -71,13 +71,6 @@ print(resolve('/foo/bar/'))
 
 Now you know that `foocms.views.bar_handler` will handle requests to the URL `/foo/bar/`.
 
-## Django Debug Toolbar.
-
-The DDT is great.
-
-Third party panel for DDT:
-
-* https://github.com/mikekeda/django-debug-toolbar-line-profiler/
 
 ## Connect to production DB (read-only)
 
@@ -148,8 +141,13 @@ DEBUG = strtobool(os.getenv('DEBUG'))
 
 # Django Debug Toolbar
 
-The [Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/) is really useful. I even enable it
-in production.
+The [Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/) is really useful.
+
+For small projects it is even fine to enable it in production via [SHOW_TOOLBAR_CALLBACK](https://django-debug-toolbar.readthedocs.io/en/latest/configuration.html#show-toolbar-callback).
+
+Third party panel for DDT:
+
+* https://github.com/mikekeda/django-debug-toolbar-line-profiler/
 
 
 # Testing
