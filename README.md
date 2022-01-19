@@ -723,6 +723,19 @@ https://github.com/xstatic-py/xstatic
 
 > django-perf-rec is like Django’s assertNumQueries on steroids. It lets you track the individual queries and cache operations that occur in your code. It stores a YAML file alongside the test file that tracks the queries and operations.
 
+# Maybe you don't need Celery
+
+Celery is very common task-queue.
+
+Nevertheless it is big and a second data-store. I prefer to have all data in one DB.
+
+With PostgreSQL you can write simple task-queues yourself. Just create a table and
+and new rows for each task.
+
+Then you can use `SELECT ... FOR UPDATE SKIP LOCKED` in your worker processes.
+
+This should work for most cases. This means there is no need for a second data-store and the huge celery library.
+
 # 500 Apps instead of Microservices
 
 [Dan Palmer - Scaling Django to 500 apps](https://youtu.be/NsHo-kThlqI)
