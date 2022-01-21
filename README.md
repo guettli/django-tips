@@ -719,6 +719,15 @@ AFAIK there is no standard way. See [How can I get the URL (with protocol and do
 
 It would be great if I could use the PK for storing the file.
 
+# Not solved yet: Invalid Template --> Exception (and default)
+
+You can use [string_if_invalid](https://docs.djangoproject.com/en/dev/ref/templates/api/#how-invalid-variables-are-handled),
+but this means you can use a "default" for the string. See: [Django string_if_invalid and default](https://stackoverflow.com/questions/40505917/django-string-if-invalid-and-default)
+
+For pytest you can use [FAIL_INVALID_TEMPLATE_VARS = True](https://pytest-django.readthedocs.io/en/latest/usage.html#fail-on-template-vars-fail-for-invalid-variables-in-templates) but again, "defaults" does not work.
+
+If the project uses [htmx](//htmx.org), this is not an issue. Because with htmx I often write small methods returning small snippets. This means I use `format_html()` instead of the template language.
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
