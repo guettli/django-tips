@@ -155,7 +155,7 @@ Third party panel for DDT:
 
 ## pytest-django for Unittests
 
-I use the library [pytest-django](https://github.com/pytest-dev/pytest-django). Their docs are good.
+I use the library [pytest-django](https://github.com/pytest-dev/pytest-django).
 
 If you want to get an exception (as opposed to an empty string) if a template variable is unknown, then you can use this config:
 
