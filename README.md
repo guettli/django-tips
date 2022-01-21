@@ -711,6 +711,14 @@ But in a command line script, you don't have a request.
 
 AFAIK there is no standard way. See [How can I get the URL (with protocol and domain) in Django (without request)?](https://stackoverflow.com/questions/34989031/how-can-i-get-the-url-with-protocol-and-domain-in-django-without-request)
 
+# Not solved yet: File Upload, create file with PK
+
+> In most cases, this object will not have been saved to the database yet, so if it uses the default AutoField, it might not yet have a value for its primary key field.
+
+[Django FileField.upload_to docs](https://docs.djangoproject.com/en/dev/ref/models/fields/#django.db.models.FileField.upload_to)
+
+It would be great if I could use the PK for storing the file.
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
