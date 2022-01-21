@@ -728,6 +728,23 @@ For pytest you can use [FAIL_INVALID_TEMPLATE_VARS = True](https://pytest-django
 
 If the project uses [htmx](//htmx.org), this is not an issue. Because with htmx I often write small methods returning small snippets. This means I use `format_html()` instead of the template language.
 
+# FileField
+
+In most cases you don't your files to override each other. This means instance-1 should be allowed to
+have a file called image.png and instance-2 should have a file with the same name (but different content).
+
+```
+foo_file = FileField(_('Foo File'),
+    upload_to=lambda instance, filename: datetime.datetime.now().strftime(
+              # use random to avoid clashing filenames
+              '%Y/%m/%d-{}/{}'.format(random.randint(100000, 999999),
+              filename)),
+              unique=True,
+              max_length=1024, blank=True, null=True)
+```
+
+Unfortunately it is not possible up to now to use instance.pk in "upload_to".
+                                                     
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
