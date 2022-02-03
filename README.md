@@ -687,6 +687,7 @@ every app can contribute to setting up a demo data.
 
 Investing time into this makes sense.
 
+Related: https://code.djangoproject.com/ticket/33467
 
 # Not solved yet: Row based permissions
 
