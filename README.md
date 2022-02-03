@@ -664,6 +664,30 @@ You want to list some hyperlinks separated by comma?
 
 See ["for" in Built-in Template Language](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#for)
 
+# Not solved yet: Creating a Demo-System
+
+You can easily create data for unittest with pytest-fixtures.
+
+But these DB rows are temporary and only for unit-testing.
+
+You want a demo system populated with some dummy data if you want
+to use your django system with the web-browser.
+
+For small projects, this is a minor issue. You can create some dummy data by hand.
+
+Or you can dump the production database and restore it in your development DB. But wait!
+This is unprofessional. This might work for small projects, but for bigger projects
+this is against data protection regulations. Developer should not see
+the data of the customers.
+
+Of course you can help yourself with a script.
+
+But it would be really cool to have a plugin-system so that
+every app can contribute to setting up a demo data.
+
+Investing time into this makes sense.
+
+
 # Not solved yet: Row based permissions
 
 Row based (AKA "per object permissions") are not easy. There are several solutions:
