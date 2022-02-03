@@ -689,6 +689,20 @@ Investing time into this makes sense.
 
 Related: https://code.djangoproject.com/ticket/33467
 
+I am not looking for libraries like factory-boy, faker or django-seed. I think
+every app should create the data the way the app wants to create the data.
+
+The interesting part is the dependency management. If app "cms-plugin" needs the data
+of "cms-core", then you need a way specify the dependency. Where "dependency" means, that
+the cms-plugin uses the primary-key of a row created by cms-core as foreign-key.
+
+For example every page needs a category. Imagine there are two plugins. cms-plugin1 creates
+a category, and cms-plugin2 depends on the existance of this category.
+
+Every app should provide N demo data creators. For example the cms-core could provide demo-data-users,
+demo-data-countries. An other app should be able to depend on demo-data-users without
+depending on demo-data-countries.
+
 # Not solved yet: Row based permissions
 
 Row based (AKA "per object permissions") are not easy. There are several solutions:
