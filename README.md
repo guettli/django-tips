@@ -541,6 +541,8 @@ Don't ask me why in [reverse()](https://docs.djangoproject.com/en/3.1/ref/urlres
 
 The Django template language hides errors. I prefer [format_html()](https://docs.djangoproject.com/en/3.1/ref/utils/#django.utils.html.format_html)
 
+The term "Field" has two meanings, and this creates confusion. There are ModelFields and FormFields.
+
 # Migrations
 
 ## Don't change old migrations
