@@ -788,7 +788,13 @@ foo_file = FileField(_('Foo File'),
 ```
 
 Unfortunately it is not possible up to now to use instance.pk in "upload_to".
-                                                     
+          
+# The admin interface is for you and your crew
+
+Don't sell the Admin-Interface to your customer. 
+
+This might make you faster on day-1, but in the long run it will slow you down.
+
 # Dependecies to non-Python packages
 
 Example: include a JS library like Bootstrap:
