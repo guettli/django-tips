@@ -48,6 +48,22 @@ I love Python methods. They are simple to write, easy to understand and exceptio
 
 But if you use the template language, you can not easily mix custom template tags with custom template filters. Example: https://stackoverflow.com/a/12249207/633961
 
+Next thing why I don't prefer to create HTML with Python:
+
+```
+    def my_special_method(self, obj):
+        return ...
+    my_special_method.short_descript = 'super name'
+```
+Above is a common pattern. Now try to access 'short_description' via the template language:
+
+```
+{{ obj.my_special_method.short_description }}
+```
+
+This does not work, since the template language does this `obj.my_special_method().short_description`. Grrr
+
+That's why I prefer [format_html()](https://docs.djangoproject.com/en/4.0/ref/utils/#django.utils.html.format_html) in Python code.
 
 ## Use CSS, not "cycle"
 
