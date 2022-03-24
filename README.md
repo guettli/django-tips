@@ -249,7 +249,7 @@ The file `models.py` is a mixture. A mixture of schema definition and logic. Tha
 
 But don't put too much logic into this file. Your subclasses of `Model` should only contain basic methods.
 
-Creating HTML and other stuff should live somewhere else.
+Business Logic, creating HTML and other stuff should live somewhere else.
 
 I usualy create a file per model: If the model is called `Foo`, then I create a file called `fooutils.py` which contains
 methods which get instance of the class `Foo` as first argument.
