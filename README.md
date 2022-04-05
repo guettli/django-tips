@@ -486,6 +486,8 @@ I know [Adding extra manager methods](https://docs.djangoproject.com/en/dev/topi
 
 I prefer to write a `@classmethod` if I want to return a custom querysets.
 
+Same for subclassing `QuerySet`. I don't think this is useful. A classmethod is easier to understand (my POV).
+
 # ORM: No GenericForeignKey
 
 My POV: Use real ForeignKeys, not [GenericForeignKeys](https://docs.djangoproject.com/en/4.0/ref/contrib/contenttypes/#generic-relations)
