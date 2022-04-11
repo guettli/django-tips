@@ -334,6 +334,20 @@ To make your application load/submit HTML snippets (to avoid the full screen ref
 
 This way you have a simple stack which gives you a solid foundation for your application.
 
+
+# Creating timezone aware datetimes.
+
+```
+from django.utils.timezone import get_current_timezone
+
+get_current_timezone().localize(datetime.datetime(1999, 1, 1, 0, 0, 0))
+
+--> datetime.datetime(1999, 1, 1, 0, 0, tzinfo=<DstTzInfo 'Europe/Berlin' CET+1:00:00 STD>)
+```
+
+From: [Create timezone aware datetime objects](https://stackoverflow.com/questions/71768804)
+
+
 # One Page, three forms
 
 You want to create one HTML page which contains three forms. The Django forms library is great, but it does not solve this problem for you.
