@@ -529,6 +529,10 @@ Source: [Django Views - The Right Way](https://spookylukey.github.io/django-view
 If you use the default of [SESSION_COOKIE_SAMESITE](https://docs.djangoproject.com/en/dev/ref/settings/#session-cookie-samesite), then
 you don't need a CSRF token. 
 
+# Thumbnails
+
+[sorl-thumbnail](https://github.com/jazzband/sorl-thumbnail) is a handy library to create thumbnails.
+
 # Uncaught Exception Handling: Sentry
 
 During development on your local machine you get a nice debug-view if there is an uncaught exception.
