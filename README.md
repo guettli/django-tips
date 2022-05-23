@@ -810,6 +810,10 @@ For pytest you can use [FAIL_INVALID_TEMPLATE_VARS = True](https://pytest-django
 
 If the project uses [htmx](//htmx.org), this is not an issue. Because with htmx I often write small methods returning small snippets. This means I use `format_html()` instead of the template language.
 
+# Not solved yet: Call method with arguments via template language
+
+You can't call a method with arguments via the template language. I wish you could. Related [How to call function that takes an argument in a Django template?](https://stackoverflow.com/questions/2468804/how-to-call-function-that-takes-an-argument-in-a-django-template/2468830#2468830)
+
 # FileField
 
 In most cases you don't your files to override each other. This means instance-1 should be allowed to
