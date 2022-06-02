@@ -866,6 +866,23 @@ This should work for most cases. This means there is no need for a second data-s
 
 [Dan Palmer - Scaling Django to 500 apps](https://youtu.be/NsHo-kThlqI)
 
+# Avoid django.contrib.sites
+
+In my experience [django.contrib.sites](https://docs.djangoproject.com/en/4.0/ref/contrib/sites/) creates more confusion, then it brings value.
+
+As soon as you use one database for several sites, you need to make sure for every request that you apply the matching filters, so that only
+the corresponding database rows get used.
+
+This makes software development complicated every day.
+
+Running two systems makes more sense for me. Running two system is more work at day-one, but once it is set up and CI/CD is automated,
+you are done.
+
+I have seen (non-django) projects which use a single database for all of their customers, although each customer must only see his data.
+There was no data shared between the customers, so that there was no reason for this architecture. The single-DB architecture 
+slowed down the development daily at several layers (development, deployment, fear of bringing the single DB down, ...)
+
+
 # Upgrading 100+ Repositories
 
 [Jeremy Bowman - Herding Ponies: Coordinating and Automating Django Upgrades Across 100+ Repositories]([https://www.youtube.com/watch?v=ny-3AaNHbbs)
