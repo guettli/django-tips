@@ -886,6 +886,8 @@ In my experience [django.contrib.sites](https://docs.djangoproject.com/en/4.0/re
 As soon as you use one database for several sites, you need to make sure for every request that you apply the matching filters, so that only
 the corresponding database rows get used.
 
+Which site to choose if there not http request, like in CronJobs?
+
 This makes software development complicated every day.
 
 Running two systems makes more sense for me. Running two system is more work at day-one, but once it is set up and CI/CD is automated,
