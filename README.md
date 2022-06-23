@@ -661,6 +661,15 @@ User.objects.filter(groups__isnull=False)
 
 Related: https://stackoverflow.com/questions/54367178/django-orm-all-users-which-have-at-least-one-group
 
+# ORM: is annotate and aggregate usefull?
+
+I am unsure wheter `annotate` and `aggregate` are cool features or not. Every time I use
+them, I know the SQL which I would write. Then I need to translate the SQL in my head
+to the Django syntax. Is this useful? I would be faster if I could write SQL directely.
+Of course I could, but I don't, since writing raw SQL is frowned upon in the Django context....
+
+
+
 # Show SQL
 
 ```
