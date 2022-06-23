@@ -502,6 +502,10 @@ I prefer to write a `@classmethod` if I want to return a custom querysets.
 
 Same for subclassing `QuerySet`. I don't think this is useful. A classmethod is easier to understand (my POV).
 
+Why do I prefer classmehods? This is a gut feeling. Maybe because Python is bigger than Django. There are more
+people who know Python, than people who know Django. If someone knows Python, but not Django, then he would
+understand a classmethod, but not a custom django manager class.
+
 # ORM: No GenericForeignKey
 
 My POV: Use real ForeignKeys, not [GenericForeignKeys](https://docs.djangoproject.com/en/4.0/ref/contrib/contenttypes/#generic-relations)
