@@ -897,6 +897,16 @@ I have seen (non-django) projects which use a single database for all of their c
 There was no data shared between the customers, so that there was no reason for this architecture. The single-DB architecture 
 slowed down the development daily at several layers (development, deployment, fear of bringing the single DB down, ...)
 
+# select_related
+
+Don't use `select_related()` except you check the performance with a benchmark and write a unit-tests which
+checks that the number of SQL queries does not increase.
+
+I have seen code where developers seem to have used select_related() randomly.
+
+Maybe an annotated query does provide even better performance.
+
+Nobody knows, except you benchmark it, and leave a link to the benchmark in the source code.
 
 # Upgrading 100+ Repositories
 
