@@ -908,6 +908,29 @@ Maybe an annotated query does provide even better performance.
 
 Nobody knows, except you benchmark it, and leave a link to the benchmark in the source code.
 
+# How to debug "ManagementForm data is missing or has been tampered with"
+
+If you get the above error message, it is sometimes hard to understand what is missing.
+
+Step 1: Create a test to reproduce the error.
+
+Step 2: Alter the django source code, to give you a better message:
+
+
+File django/forms/formsets.py
+
+```
+ if not form.is_valid():
+     raise ValidationError(
+-        _('ManagementForm data is missing or has been tampered with'),
++         _('ManagementForm data is missing or has been tampered with xxxxxx prefix={} errors: {}'.format(
++             form.prefix, form.errors)),
+         code='missing_management_form',
+     )
+```
+
+Now you see what is missing.
+
 # Upgrading 100+ Repositories
 
 [Jeremy Bowman - Herding Ponies: Coordinating and Automating Django Upgrades Across 100+ Repositories]([https://www.youtube.com/watch?v=ny-3AaNHbbs)
