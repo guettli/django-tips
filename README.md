@@ -923,7 +923,7 @@ File django/forms/formsets.py
  if not form.is_valid():
      raise ValidationError(
 -        _('ManagementForm data is missing or has been tampered with'),
-+         _('ManagementForm data is missing or has been tampered with xxxxxx prefix={} errors: {}'.format(
++        _('ManagementForm data is missing or has been tampered with xxxxxx prefix={} errors: {}'.format(
 +             form.prefix, form.errors)),
          code='missing_management_form',
      )
