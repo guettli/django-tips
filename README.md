@@ -950,6 +950,29 @@ But I think it makes more sense to write a view which returns a HTML page and a 
 
 HTML gives you much more freedom. For example you can create tables, which you can't if you use text output.
 
+# get_or_create() --> unique constraint
+
+If you use `get_or_create()` (or `update_or_create()`), then you most likely want your
+model to have a corresponding unique constraint.
+
+If you don't have a unique constraint, and two http-requests get handled by your application, which
+execute the same `get_or_create()`, then both http-requests will create a new row.
+
+Now your state in the DB is broken, because the next call to `get_or_create()` with the same values,
+will fail:
+
+
+`MultipleObjectsReturned: get() returned more than one FooModel -- it returned 2!`
+
+Examples: 
+
+You use `FooModel.objects.get_or_create(foo=...)`, then the attribute `foo` on you
+model needs to be unique.
+
+
+If you use `OtherModel.objects.get_or_create(my_col=..., my_other_col=...)`, then you need `unique_together`.
+
+
 # Related
 
 * [Güttli django-htmx-fun](https://github.com/guettli/django-htmx-fun) Small intro to htmx.
