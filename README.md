@@ -588,6 +588,8 @@ Adam has a great article about [How to Make Django Raise an Error for Missing Te
 
 The term "Field" has two meanings, and this creates confusion. There are ModelFields and FormFields.
 
+Template language: allow for `{% if foo in ["one", "two", "three"] %}`. Related: [check for presence in a list django template](https://stackoverflow.com/questions/7481750/check-for-presence-in-a-list-django-template)
+
 # Migrations
 
 ## Don't change old migrations
