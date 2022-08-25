@@ -590,6 +590,8 @@ The term "Field" has two meanings, and this creates confusion. There are ModelFi
 
 Template language: allow for `{% if foo in ["one", "two", "three"] %}`. Related: [check for presence in a list django template](https://stackoverflow.com/questions/7481750/check-for-presence-in-a-list-django-template)
 
+Parentheses in expression in the template language would be nice. Related docs [Boolean operators](https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#boolean-operators)
+
 # Migrations
 
 ## Don't change old migrations
