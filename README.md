@@ -689,7 +689,7 @@ User.objects.filter(...).query
 [python-diskcache](https://github.com/grantjenks/python-diskcache) is an replacement for the [FileBasedCache](https://docs.djangoproject.com/en/dev/topics/cache/#filesystem-caching). For small projects you might not need
 a Redis server.
 
-# Use Signals as Hooks: Use the return-value
+# Signals as Hooks: Use the return-value
 
 Django has an excelent hook-system, but many don't know it: Signals.
 
