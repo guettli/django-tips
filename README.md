@@ -689,6 +689,24 @@ User.objects.filter(...).query
 [python-diskcache](https://github.com/grantjenks/python-diskcache) is an replacement for the [FileBasedCache](https://docs.djangoproject.com/en/dev/topics/cache/#filesystem-caching). For small projects you might not need
 a Redis server.
 
+# Use Signals as Hooks: Use the return-value
+
+Django has an excelent hook-system, but many don't know it: Signals.
+
+You can use the return values of signals handlers.
+
+This is handy if you have a core-app with several plugins.
+
+1. Create a custom signal
+2. Call the signal handler
+3. Use the [return values of `Signal.send()](https://docs.djangoproject.com/en/4.1/topics/signals/#django.dispatch.Signal.send)
+
+Docs:
+
+> Both send() and send_robust() return a list of tuple pairs [(receiver, response), ... ],
+> representing the list of called receiver functions and their response values.
+
+
 # PostgreSQL Extensions
 
 [django.contrib.postgres](https://docs.djangoproject.com/en/dev/ref/contrib/postgres/) has some nice features.
@@ -854,11 +872,6 @@ Don't sell the Admin-Interface to your customer.
 
 This might make you faster on day-1, but in the long run it will slow you down.
 
-# Dependecies to non-Python packages
-
-Example: include a JS library like Bootstrap:
-
-https://github.com/xstatic-py/xstatic
 
 # Testing: Ensure your number of SQL queries does not increase
 
@@ -873,11 +886,14 @@ Celery is very common task-queue.
 Nevertheless it is big and a second data-store. I prefer to have all data in one DB.
 
 With PostgreSQL you can write simple task-queues yourself. Just create a table and
-and new rows for each task.
+and add new rows for each task.
 
 Then you can use `SELECT ... FOR UPDATE SKIP LOCKED` in your worker processes.
 
 This should work for most cases. This means there is no need for a second data-store and the huge celery library.
+
+You can use [LISTEN](https://www.postgresql.org/docs/current/sql-listen.html), to process new data immediately.
+
 
 # 500 Apps instead of Microservices
 
