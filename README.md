@@ -697,9 +697,10 @@ You can use the return values of signals handlers.
 
 This is handy if you have a core-app with several plugins.
 
-1. Create a custom signal
-2. Call the signal handler
-3. Use the [return values of `Signal.send()](https://docs.djangoproject.com/en/4.1/topics/signals/#django.dispatch.Signal.send)
+1. Create a custom signal in the core-app.
+2. Implement a signal handler in the optional plugin-app.
+3. Call the signal handler from the core-app.
+4. Use the [return values of `Signal.send()](https://docs.djangoproject.com/en/4.1/topics/signals/#django.dispatch.Signal.send)
 
 Docs:
 
