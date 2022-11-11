@@ -993,6 +993,16 @@ model needs to be unique.
 
 If you use `OtherModel.objects.get_or_create(my_col=..., my_other_col=...)`, then you need `unique_together`.
 
+# How to see which templates got loaded in a http request?
+
+In the development environment open `template/base.py` and add a print statement:
+
+```
+class Template(object):
+    def __init__(self, template_string, origin=None,
+                 name='<Unknown Template>'):
+        print('.............loading', name)
+```   
 
 # Related
 
