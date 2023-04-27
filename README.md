@@ -518,9 +518,7 @@ Since I switched to [htmx.org](//htmx.org) I prefer FBV.
 
 > You don’t need to learn any of the CBV APIs - TemplateView, ListView, DetailView, FormView, 
 > MultipleObjectMixin etc. etc. and all their inheritance trees or method flowcharts. 
-> They will only make your life harder.You don’t need to learn any of the CBV APIs -
-> TemplateView, ListView, DetailView, FormView, MultipleObjectMixin etc. etc. 
-> and all their inheritance trees or method flowcharts. They will only make your life harder.
+> They will only make your life harder.
 
 Source: [Django Views - The Right Way](https://spookylukey.github.io/django-views-the-right-way/index.html) by Luke Plant.
 
